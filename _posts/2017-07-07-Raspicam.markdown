@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Raspberry Pi Cameras for Tokamaks"
+date: 2017-07-07
+categories:
+  - Side Projects
+description: 
+image: https://unsplash.it/2000/1200?image=1003
+image-sm: https://unsplash.it/500/300?image=1003
+---
+The raspberry Pi camera was developed in order to test the capabilities of Raspberry Pis
+
+<ul>
+  <li>Point1.</li>
+  <li>Point2.</li>
+  <li>Point3.</li>
+  <li>Point4.</li>
+</ul>
