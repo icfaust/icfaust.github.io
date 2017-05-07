@@ -5,8 +5,8 @@ date: 2017-07-07
 categories:
   - Side-Projects
 description: 
-image: https://unsplash.it/2000/1200?image=1003
-image-sm: https://unsplash.it/500/300?image=1003
+image: https://github.com/icfaust/icfaust.github.io/blob/master/_screenshots/1160902011-frames-21.jpg
+image-sm: https://github.com/icfaust/icfaust.github.io/blob/master/_screenshots/1160902011-frames-21.jpg
 ---
 The raspberry Pi camera was developed in order to test the capabilities of Raspberry Pis
 
