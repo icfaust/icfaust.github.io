@@ -3,7 +3,7 @@ layout: post
 title: "Test3 Beer"
 date: 2016-02-19
 categories:
-  - Side Projects
+  - Side-Projects
 description: 
 image: https://unsplash.it/2000/1200?image=1003
 image-sm: https://unsplash.it/500/300?image=1003
