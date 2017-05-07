@@ -7,7 +7,7 @@ google_analytics:
 
 # SEO settings
 title: Ian Faust
-description: 
+description: Various projects related to Ian Faust's hobbies and work.
 url: ""
 twitter_username: 
 default_img: 
@@ -16,7 +16,7 @@ default_img:
 name: Ian Faust 
 profile_img: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/Ian_Faust.jpg
 linkedin: Ian Faust
-profile: 
+profile: Is this supposed to be a text?
 social:
 github: icfaust
 
