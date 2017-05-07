@@ -13,11 +13,11 @@ twitter_username:
 default_img: 
 
 # Profile settings
-name: 
+name: Ian Faust 
 profile_img: 
 profile: 
 social:
-  github: 
+github: icfaust
 
 # Build settings
 exclude: ["_screenshots", "Gemfile", "Gemfile.lock", "LICENSE.txt", "README.md"]
