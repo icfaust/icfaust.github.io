@@ -8,7 +8,7 @@ description:
 image: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/1160902011-frames-21.jpg
 image-sm: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/1160902011-frames-21.jpg
 ---
-The raspberry Pi camera was developed in order to test the capabilities of Raspberry Pis
+The raspberry Pi camera was developed in order to test the capabilities of Raspberry Pis. Look at this image!!!
 
 <ul>
   <li>Point1.</li>
