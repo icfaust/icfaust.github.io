@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Test2 Beer"
+title: "Test3 Beer"
 date: 2016-02-19
 categories:
   - Juice
