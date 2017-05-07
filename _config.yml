@@ -14,7 +14,7 @@ default_img:
 
 # Profile settings
 name: Ian Faust 
-profile_img: 
+profile_img: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/Ian_Faust.jpg
 profile: 
 social:
 github: icfaust
