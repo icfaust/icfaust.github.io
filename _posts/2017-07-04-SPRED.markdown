@@ -5,10 +5,10 @@ date: 2017-07-04
 categories:
   - Work
 description: 
-image: https://github.com/icfaust/icfaust.github.io/blob/master/_screenshots/1160902011-frames-21.jpg
-image-sm: https://github.com/icfaust/icfaust.github.io/blob/master/_screenshots/1160902011-frames-21.jpg
+image: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/SPRED_13.2.png
+image-sm: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/SPRED_13.2.png
 ---
-The raspberry Pi camera was developed in order to test the capabilities of Raspberry Pis
+SPRED spectrometer used on the ASDEX-Upgrade tokamak at the Max-Planck Institute for Plasma Physics.
 
 <ul>
   <li>Point1.</li>
