@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Reverse Engineering of a EUV spectometer"
+title: "Reverse Engineering of an EUV spectometer"
 date: 2017-07-04
 categories:
   - Work
