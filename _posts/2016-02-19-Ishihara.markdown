@@ -8,13 +8,16 @@ description:
 image: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/Beast_Ishihara.png
 image-sm: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/Beast_Ishihara.png
 ---
-In honor of some of my colorblind students at MIT, I developed a code which can generate an  <a href="https://en.wikipedia.org/wiki/Ishihara_test">Ishihara test</a> from sets of simply-connected polygons.
+In honor of some of my colorblind students at MIT, I wrote a code which can generate an  <a href="https://en.wikipedia.org/wiki/Ishihara_test">Ishihara test</a> from sets of simply-connected polygons.
+
+This work required the following:
 
 <ul>
-  <li>Actually YOLO marfa tofu shabby chic snackwave. Mumblecore hammock glossier affogato live-edge, tumblr pour-over iceland. Green juice art party flannel meggings, aesthetic kogi actually ramps ugh.</li>
-  <li>Church-key crucifix messenger bag health goth</li>
-  <li>Try-hard artisan direct trade</li>
-  <li>Cold-pressed selfies</li>
+  <li>Algorithm of line-cicle intersections</li>
+  <li>Determination of if a point is within a polygon</li>
+  <li>Monte Carlo circle placement</li>
+  <li>Extraction of polygon verticies from vector formats </li>
+  <li>Proper coloring for the colorblind</li>
 </ul>
 
 <ol>
