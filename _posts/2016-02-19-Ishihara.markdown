@@ -22,6 +22,12 @@ This required the following:
 
 <h3>Line-plane intersections</h3>
 
+The <a href="https://en.wikipedia.org/wiki/Line-plane_intersection">intersection of a line and plane</a> is a straightforward 3x3 matrix inversion which is often used in ray-tracing softwares. In two dimenstions, it is the intersection of two lines. In either case, the matrix inversion represents the linearity of the problem where only two solutions exist. Either the line either intersects it at some distance or is parallel to the plane or line itself (this condition leads to a singular matrix). 
+
+The Ishihara plate problem requires telling if a circle intersects with a line. These lines define the polygon of some object and the circles should not touch or cross these boundaries. Also, the circles need to placed so that they seem random. Unlike the line-plane intersection, the intersection of a line and a circle is not a linear problem as the line can intersect the circle anywhere from zero to two times.
+
+The intersection of a line and a circle can be simply solved using the quadratic equation instead. While more complicated than the matrix math, its not too hard to code.
+
 <figure>
   <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/testout2.gif" alt="Placeholder"/>
 </figure>
