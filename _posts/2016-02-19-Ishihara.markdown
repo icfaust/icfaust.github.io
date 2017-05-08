@@ -13,7 +13,7 @@ In honor of some of my colorblind students at MIT, I wrote a code which can gene
 This required the following:
 
 <ul>
-  <li>Algorithm for line-cicle intersections</li>
+  <li>Algorithm for line-circle intersections</li>
   <li>Algorithm for if a point is within a polygon</li>
   <li>Monte Carlo circle placement</li>
   <li>Extraction of polygon vertices from the svg format </li>
