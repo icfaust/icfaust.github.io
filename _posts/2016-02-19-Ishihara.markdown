@@ -8,15 +8,15 @@ description:
 image: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/Beast_Ishihara.png
 image-sm: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/Beast_Ishihara.png
 ---
-In honor of some of my colorblind students at MIT, I wrote a code which can generate an  <a href="https://en.wikipedia.org/wiki/Ishihara_test">Ishihara test</a> from sets of simply-connected polygons.
+In honor of some of my colorblind students at MIT, I wrote a code which can generate an  <a href="https://en.wikipedia.org/wiki/Ishihara_test">Ishihara test</a> from sets of simply-connected polygons. The outcome is a working example of the <a href="http://web.mit.edu/beast/www/">'Beast'</a> hall symbol.
 
-This work required the following:
+This required the following:
 
 <ul>
-  <li>Algorithm of line-cicle intersections</li>
-  <li>Determination of if a point is within a polygon</li>
+  <li>Algorithm for line-cicle intersections</li>
+  <li>Algorithm for if a point is within a polygon</li>
   <li>Monte Carlo circle placement</li>
-  <li>Extraction of polygon verticies from vector formats </li>
+  <li>Extraction of polygon vertices from the svg format </li>
   <li>Proper coloring for the colorblind</li>
 </ul>
 
