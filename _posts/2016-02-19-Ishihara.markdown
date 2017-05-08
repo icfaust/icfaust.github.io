@@ -24,7 +24,7 @@ This required the following:
 
 The <a href="https://en.wikipedia.org/wiki/Line-plane_intersection">intersection of a line and plane</a> is a straightforward 3x3 matrix inversion which is often used in ray-tracing softwares. In two dimenstions it is the intersection of two lines. In either case the matrix inversion represents the linearity of the problem where only two solutions exist. The line either intersects it at some distance or is parallel to the plane or line itself (this condition leads to a singular matrix). 
 
-The Ishihara plate problem requires telling if a circle intersects with a line. The colored circles should not touch or cross the boundaries of the polygonsm and need also be placed so that they seem random. Luckily, while the intersection of a line and a circle is not linear, the solution only requires the use of a quadratic equation.
+The Ishihara plate problem requires telling if a circle intersects with a line. The colored circles should not touch or cross the boundaries of the polygons and should be placed so that they seem random. Luckily, while the intersection of a line and a circle is not linear, the solution only requires the use of a quadratic equation. The first essential test is to make sure placed color circles are valid in this scheme.
 
 problem as the line can intersect the circle anywhere from zero to two times.
 
