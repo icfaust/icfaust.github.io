@@ -84,7 +84,7 @@ Each dot was randomly assigned to be light or dark and given red or green based 
 The output after putting it all together:
 
 <figure>
-  <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/Beast_Ishihara.png" alt="Beast Ishihara"/>
+  <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/Beast_Ishihara.png" width="75%" alt="Beast Ishihara"/>
   <figcaption>2nd East as an Ishihara plate.</figcaption>
 </figure>
 
