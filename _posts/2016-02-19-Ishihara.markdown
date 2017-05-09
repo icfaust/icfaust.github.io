@@ -8,7 +8,6 @@ description:
 image: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/Beast_Ishihara.png
 image-sm: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/Beast_Ishihara.png
 ---
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 
 
 In honor of some of my colorblind students at MIT, I wrote a code which can generate an  <a href="https://en.wikipedia.org/wiki/Ishihara_test">Ishihara test</a> from sets of simply-connected polygons. The outcome is a working example of the <a href="http://web.mit.edu/beast/www/">'Beast'</a> hall symbol.
