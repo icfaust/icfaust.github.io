@@ -13,28 +13,31 @@ In honor of some of my colorblind students at MIT, I wrote a code which can gene
 This required the following:
 
 <ul>
+  <li>Monte Carlo circle placement</li>
   <li>Algorithm for line-circle intersections</li>
   <li>Algorithm for if a point is within a polygon</li>
-  <li>Monte Carlo circle placement</li>
   <li>Extraction of polygon vertices from the svg format </li>
   <li>Proper coloring for the colorblind</li>
 </ul>
 
-<h3>Line-plane intersections</h3>
 
-The <a href="https://en.wikipedia.org/wiki/Line-plane_intersection">intersection of a line and plane</a> is a straightforward 3x3 matrix inversion which is often used in ray-tracing softwares. In two dimenstions it is the intersection of two lines. In either case the matrix inversion represents the linearity of the problem where only two solutions exist. The line either intersects it at some distance or is parallel to the plane or line itself (this condition leads to a singular matrix). 
+<h3>Monte Carlo circle placement</h3>
 
-The Ishihara plate problem requires telling if a circle intersects with a line. The colored circles should not touch or cross the boundaries of the polygons and should be placed so that they seem random. Luckily, while the intersection of a line and a circle is not linear, the solution only requires the use of a quadratic equation. The first essential test is to make sure placed color circles are valid in this scheme.
-
-problem as the line can intersect the circle anywhere from zero to two times.
-
-The intersection of a line and a circle can be simply solved using the quadratic equation instead. While more complicated than the matrix math, its not too hard to code.
+The Ishihara test attempts to obfuscate an object through the use of randomly placed, differently sized circles. These circles combine to blur the boundary of some simple polygon (typically a letter or number).  Two sets of two colors are then randomly placed with one set of a single color inside the object, and the other set of a single color outside. Usually this is a dark and light red, and then a dark and light green.  Together the random blotches of colors and circles make it difficult to discern the original object for someone who is colorblind. For normal vision, the separation of the sets colors allows for the objects to be easily identified. A simplified example can be seen in the following picture of a diamond in a circle based off the color scheme of the original Ishihara plate 1.
 
 <figure>
   <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/testout2.gif" alt="Placeholder"/>
 </figure>
 
-Meh food truck tofu succulents, literally waistcoat skateboard poke pop-up cold-pressed put a bird on it cliche umami cornhole kale chips. Man braid 8-bit irony selvage, butcher blog everyday carry. Af meggings tacos ugh la croix skateboard. Biodiesel paleo prism kombucha seitan drinking vinegar. Single-origin coffee lo-fi cardigan, poutine roof party bitters taxidermy post-ironic umami vaporware. Austin edison bulb leggings cliche. Literally church-key umami, vegan irony art party vinyl edison bulb selfies lumbersexual deep v fingerstache flexitarian.
+Replicating this effect without lots of hand labor means randomly placing dots of various sizes which do not cross boundaries, that are well distanced from other dots, and appear random. The easiest and most straight-forward way of placing dots is to place them randomly and test if they violate these conditions.  This simple Monte Carlo method rests on being able to create an array of valid dots and polygon lines which are compared to the next random dot. Each possible circle is tested against the lines and circles previously placed for a large sample of possible circles. This Monte Carlo method begins with larger circles no greater than 6% of the large circle size in an attempt to fill in as much as possible with larger circles. Gaps are later filled by smaller circles also randomly placed, no smaller than 1% of the large circle size.  This methodology reasonably reproduces an Ishihara plate.   
+
+<h3>Line-plane intersections</h3>
+
+The first problem is finding if the randomly placed circles cross the boundary of an object. The object is defined by a set of straight lines which closes upon itself, each of which must be tested against the tested circle. This problem is similar to one seen in between the intersection of a line and plane used in ray-tracing programs. Solving for the <a href="https://en.wikipedia.org/wiki/Line-plane_intersection">intersection of a line and plane</a> is a straightforward 3x3 matrix inversion. In two dimensions it is the intersection of two lines. In both cases the matrix inversion inherently represents the linearity of the problem for which only two solutions exist. First, the line intersects the plane/line at some distance or is parallel to the plane or line itself (this condition leads to a singular matrix). 
+
+Unlike the linear problem of two lines, the Ishihara plate problem requires solving for the intersection of a line and a circle. The solution only requires the use of a quadratic equation, yielding three possible answers. Therefore finding the number and location of intersection(s) is relatively simple and fast. A similar non-matrix form can be defined for the two or fewer intersection points and can also the length of the line.
+
+The center and radius of the circle is defined as the vector xc and r respectively, and the endpoints of the two lines as vectors x0 and x1. The  The line is defined from x0 to x1 with vector v1, and a vector v2 is defined from the starting point of the line to the center of the circle. The length along v1 define
 
 <h4>How to tell if a point is within a polygon</h4>
 Slow-carb cornhole crucifix thundercats intelligentsia. Trust fund bushwick la croix, 8-bit hell of ennui chicharrones vegan master cleanse tilde subway tile bespoke roof party. Next level celiac bushwick coloring book subway tile. Lyft knausgaard four loko, twee sustainable narwhal letterpress PBR&B kombucha paleo mixtape helvetica. Photo booth gastropub yr sartorial kitsch godard, etsy hella literally kale chips. Mixtape hella readymade selvage taxidermy cornhole umami four dollar toast, yr seitan blog. Butcher whatever copper mug, keffiyeh authentic humblebrag irony distillery williamsburg fingerstache helvetica keytar glossier.
