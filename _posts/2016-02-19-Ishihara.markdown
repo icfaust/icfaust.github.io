@@ -84,7 +84,7 @@ Each dot was randomly assigned to be light or dark and given red or green based 
 The output after putting it all together
 
 <figure>
-  <img src="https://unsplash.it/2000/1200?image=1003" alt="Placeholder"/>
+  <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/beast.svg" alt="Placeholder"/>
   <figcaption>Gentrify cray pug authentic, cliche listicle actually subway tile woke semiotics af.</figcaption>
 </figure>
 
