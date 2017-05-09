@@ -51,7 +51,6 @@ Astute people will notice the second equation is the vector form of the <a href=
 
 Once a valid circle is added to the set of other valid circles, the region of the circle needs to be determined for its coloring. Luckily, this is a solved problem, with many available versions in many different codes.  The problem is known as the '<a href="https://en.wikipedia.org/wiki/Point_in_polygon"> point in polygon </a>' problem. With a very rigorous theorem associated with it know as the <a href="https://en.wikipedia.org/wiki/Jordan_curve_theorem"> Jordan curve theorem</a>. Rather than regurgitate the contents of other websites, its better to click these links and see the other (better) explanations. <a href="https://jrwalk.github.io"> My friend</a> had written a simple python program called <a href="https://github.com/PSFCPlasmaTools/eqtools/blob/master/eqtools/core.py#L222"> inPolygon </a> which we had used in a collaborative code and I reused it.
 
-
 <h5>Getting points out of an SVG file</h5>
 
 
