@@ -24,7 +24,7 @@ This required the following:
 
 <h3>Monte Carlo circle placement</h3>
 
-The Ishihara test attempts to obfuscate an object through the use of randomly placed, differently sized circles. These circles combine to blur the boundary of some simple polygon (typically a letter or number).  Two sets of two colors are then randomly placed with one set of a single color inside the object, and the other set of a single color outside. Usually this is a dark and light red, and then a dark and light green.  Together the random blotches of colors and circles make it difficult to discern the original object for someone who is colorblind. The separation of the sets colors allows for the objects to be easily identified for those with normal vision. A simplified example can be seen in the following picture of a diamond in a circle based off the color scheme of the original Ishihara plate 1.
+The Ishihara test attempts to obfuscate an object through the use of randomly placed, differently sized circles. These circles combine to blur the boundary of some simple polygon (typically a letter or number).  Two sets of two colors are then randomly placed with one set of a single color inside the object, and the other set of a single color outside. Usually this is a dark and light red, and then a dark and light green.  Together the random blotches of colors and circles transforms the original object into something difficult to determine for someone who is colorblind. Yet the separation of the color sets allows for the objects to be easily identified for those with normal vision. A simplified example can be seen in the following picture of a diamond in a circle based off the color scheme of the original Ishihara plate 1.
 
 <figure>
   <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/testout2.gif" alt="Placeholder"/>
@@ -51,6 +51,8 @@ Astute people will notice the second equation is the vector form of the <a href=
 
 Once a valid circle is added to the set of other valid circles, the region of the circle needs to be determined for its coloring. Luckily this is a solved problem, with many available versions in many different codes. The problem is known as the '<a href="https://en.wikipedia.org/wiki/Point_in_polygon"> point in polygon </a>' problem. The essence of the solution is starting from the point, drawing a line to infinity, and counting the number of times it crosses the boundary of the object. If the total is even, it is outside and vice versa. A much more rigorous theorem associated with it known as the <a href="https://en.wikipedia.org/wiki/Jordan_curve_theorem"> Jordan curve theorem</a>. Rather than regurgitate the contents of other websites, its better to click these links and see the other (better) explanations. <a href="https://jrwalk.github.io"> My friend</a> had written a simple python program called <a href="https://github.com/PSFCPlasmaTools/eqtools/blob/master/eqtools/core.py#L222"> inPolygon </a> (there is a widely known MATLAB program with the same name and function) which we had used in a collaborative code and I simply reused it.
 
+For each circle, a set of booleans is stored which describes if the circle is within a specfic object.  Doing the requisite logical statement using these can determine the necessary color set to use. 
+
 <h3>Getting points out of an SVG file</h3>
 
 An SVG file is a specially formatted xml document which defines a vector graphic.  The outline of most objects in this format is defined by a 'path' tag. A 'path' contains a representative Bezier curve, spline or line. As higher order curves (<i>e.g.</i> parabolas and splines) require higher order root solving (cubic or quartic root) to find the intersection with circles, the goal is to extract the start and end points of every separate curve in a path and store them in a separate file. I assumed that these points are the vertices of straight lines for simplicity. Thus it was important to reduce said SVG picture to a sufficient number of straight-line segments which accurately reflected the image.
@@ -62,6 +64,9 @@ A good guide to SVG file paths: <a href="https://developer.mozilla.org/en-US/doc
 A really useful stack overflow post: <a href="http://stackoverflow.com/questions/15857818/python-svg-parser"> http://stackoverflow.com/questions/15857818/python-svg-parser </a>
 
 <h3>Proper coloring for the colorblind</h3>
+
+Now that there is a methodology for generating the dots, testing them, and separating them in the proper groups, what colors should we use?  Since I am not colorblind myself
+
 
 Slow-carb cornhole crucifix thundercats intelligentsia. Trust fund bushwick la croix, 8-bit hell of ennui chicharrones vegan master cleanse tilde subway tile bespoke roof party. Next level celiac bushwick coloring book subway tile. Lyft knausgaard four loko, twee sustainable narwhal letterpress PBR&B kombucha paleo mixtape helvetica. Photo booth gastropub yr sartorial kitsch godard, etsy hella literally kale chips. Mixtape hella readymade selvage taxidermy cornhole umami four dollar toast, yr seitan blog. Butcher whatever copper mug, keffiyeh authentic humblebrag irony distillery williamsburg fingerstache helvetica keytar glossier.
 
