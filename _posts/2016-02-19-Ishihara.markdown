@@ -23,6 +23,7 @@ This required the following:
   <li>Proper coloring for the colorblind</li>
 </ul>
 
+$$a^2 + b^2$$
 
 <h3>Monte Carlo circle placement</h3>
 
