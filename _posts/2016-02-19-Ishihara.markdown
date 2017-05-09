@@ -42,7 +42,7 @@ Unlike the linear problem of two lines, the Ishihara plate problem requires solv
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/line-plane-intersection.png" alt="Cartoon of intersection"/>
-    <figcaption>Representation of important variables</figcaption>
+    <figcaption>Representation of important variables, with the line-circle intersection vector in green</figcaption>
   </figure>
 
 
