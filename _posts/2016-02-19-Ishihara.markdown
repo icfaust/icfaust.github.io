@@ -27,7 +27,7 @@ This required the following:
 The Ishihara test attempts to obfuscate an object through the use of randomly placed, differently sized circles. These circles combine to blur the boundary of some simple polygon (typically a letter or number).  Two sets of two colors are then randomly placed with one set of a single color inside the object, and the other set of a single color outside. Usually this is a dark and light red, and then a dark and light green.  Together the random blotches of colors and circles transforms the original object into something difficult to determine for someone who is colorblind. Yet the separation of the color sets allows for the objects to be easily identified for those with normal vision. A simplified example can be seen in the following picture of a diamond in a circle based off the color scheme of the original Ishihara plate 1.
 
 <figure>
-  <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/testout2.gif" alt="Placeholder"/>
+  <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/testout2.gif" alt="Example Diamond Ishihara"/>
   <figcaption>The center diamond is hard to see without color.</figcaption>
 </figure>
 
@@ -77,15 +77,15 @@ Now that there is a methodology for generating the dots, testing them, and separ
 Each dot was randomly assigned to be light or dark and given red or green based off of what polygon it was in. I tested a number of random dark/light distributions in order to make it as hard to see as possible (thanks to my 'test-subjects'). The original image is a black and white of silhouette infront of a moon.
 
 <figure>
-  <img src="https://unsplash.it/2000/1200?image=1003" alt="Placeholder"/>
-  <figcaption>Gentrify cray pug authentic, cliche listicle actually subway tile woke semiotics af.</figcaption>
+  <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/beastshot.png" alt="Original Beast png"/>
+  <figcaption>2nd East Original</figcaption>
 </figure>
 
-The output after putting it all together
+The output after putting it all together:
 
 <figure>
-  <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/beast.svg" alt="Placeholder"/>
-  <figcaption>Gentrify cray pug authentic, cliche listicle actually subway tile woke semiotics af.</figcaption>
+  <img src=" https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/Beast_Ishihara.png" alt="Beast Ishihara"/>
+  <figcaption>2nd East as an Ishihara plate.</figcaption>
 </figure>
 
 Overall, the concepts of this project were rather straightforward, and the example code I used can be found here in my project Github repository.
