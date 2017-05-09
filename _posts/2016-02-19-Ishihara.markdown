@@ -22,8 +22,6 @@ This required the following:
   <li>Proper coloring for the colorblind</li>
 </ul>
 
-$$a^2 + b^2$$
-
 <h3>Monte Carlo circle placement</h3>
 
 The Ishihara test attempts to obfuscate an object through the use of randomly placed, differently sized circles. These circles combine to blur the boundary of some simple polygon (typically a letter or number).  Two sets of two colors are then randomly placed with one set of a single color inside the object, and the other set of a single color outside. Usually this is a dark and light red, and then a dark and light green.  Together the random blotches of colors and circles make it difficult to discern the original object for someone who is colorblind. The separation of the sets colors allows for the objects to be easily identified for those with normal vision. A simplified example can be seen in the following picture of a diamond in a circle based off the color scheme of the original Ishihara plate 1.
@@ -40,7 +38,7 @@ The first problem is finding if the randomly placed circles cross the boundary o
 
 Unlike the linear problem of two lines, the Ishihara plate problem requires solving for the intersection of a line and a circle. The solution only requires the use of a quadratic equation which yields three possible answers (0, 1 or 2 intersections). Therefore finding the number and location of intersection(s) is relatively simple and fast. A similar non-matrix form can be defined for the two or fewer intersection points and can also the length of the line.
 
-The center and radius of the circle is defined as the vector $$\vec{x}_c$$ and r respectively, and the endpoints of the two lines as vectors x0 and x1. The  The line is defined from x0 to x1 with vector v1, and a vector v2 is defined from the starting point of the line to the center of the circle. The length along v1 define
+The center and radius of the circle is defined as the vector $$\vec{x}_c$$ and r respectively, and the endpoints of the two lines as vectors $$\vec{x}_0$$ and $$\vec{x}_1$$. The line is defined from $$\vec{x}_0$$ to $$\vec{x}_1$$ with vector $$\vec{v}_1$$, and a vector $$\vec{v}_2$$ is defined from the starting point of the line to the center of the circle. The length along v1 define
 
 <h4>How to tell if a point is within a polygon</h4>
 Slow-carb cornhole crucifix thundercats intelligentsia. Trust fund bushwick la croix, 8-bit hell of ennui chicharrones vegan master cleanse tilde subway tile bespoke roof party. Next level celiac bushwick coloring book subway tile. Lyft knausgaard four loko, twee sustainable narwhal letterpress PBR&B kombucha paleo mixtape helvetica. Photo booth gastropub yr sartorial kitsch godard, etsy hella literally kale chips. Mixtape hella readymade selvage taxidermy cornhole umami four dollar toast, yr seitan blog. Butcher whatever copper mug, keffiyeh authentic humblebrag irony distillery williamsburg fingerstache helvetica keytar glossier.
