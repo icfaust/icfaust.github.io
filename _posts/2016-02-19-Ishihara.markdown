@@ -39,6 +39,14 @@ The first problem is finding if the randomly placed circles cross the boundary o
 
 Unlike the linear problem of two lines, the Ishihara plate problem requires solving for the intersection of a line and a circle. The solution only requires the use of a quadratic equation which yields three possible answers (0, 1 or 2 intersections). Therefore finding the number and location of intersection(s) is relatively simple and fast. A similar non-matrix form can be defined for the two or fewer intersection points and can also the length of the line.
 
+
+  <figure>
+    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/line-plane-intersection.png" alt="Cartoon of intersection"/>
+    <figcaption>Representation of important variables</figcaption>
+  </figure>
+
+
+
 The center and radius of the circle is defined as the vector $$\vec{x}_c$$ and $$R$$ respectively, and the endpoints of the two lines as vectors $$\vec{x}_0$$ and $$\vec{x}_1$$. With $$\vec{v}_1 = \vec{x}_1-\vec{x}_0$$, and a vector $$\vec{v}_2 = \vec{x}_c - \vec{x}_0$$, the distance along $$\vec{v}_1$$ (defined as $$l$$) of the intersection with the circle can be readily solved. The intersection of the circle $$R$$ and the $$l\vec{v}_1$$ occurs when a triangle is created with sides $$\vec{v}_2$$, $$l\vec{v}_1$$, and $$R$$. $$R$$ can be defined from a vector subraction and a dot product with itself.
 
 $$\vec{R} = l\vec{v}_1-\vec{v}_2$$
