@@ -78,12 +78,12 @@ Each dot was randomly assigned to be light or dark and given red or green based 
 
 <div id="comparison">
   <figure>
-    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/beastshot.png" alt="Original Beast png"/>
+    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/beastshot.png" width="200" alt="Original Beast png"/>
     <figcaption>2nd East Original</figcaption>
   </figure>
 
   <figure>
-    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/Beast_Ishihara.png" width="5%" alt="Beast Ishihara"/>	
+    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/Beast_Ishihara.png" alt="Beast Ishihara"/>	
     <figcaption>2nd East as an Ishihara plate.</figcaption>
   </figure>
 </div>
