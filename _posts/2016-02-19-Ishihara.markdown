@@ -28,6 +28,7 @@ The Ishihara test attempts to obfuscate an object through the use of randomly pl
 
 <figure>
   <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/testout2.gif" alt="Placeholder"/>
+  <figcaption>Without color the center diamond is hard to see.</figcaption>
 </figure>
 
 Replicating this effect without lots of labor by hand means randomly placing dots of various sizes which do not cross boundaries, that are well distanced from other dots, and appear random. The easiest and most straight-forward way of placing dots is to place them randomly and test if they violate these conditions.  This simple <a href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte Carlo method</a> rests on being able to create an array of valid dots and polygon lines which are compared to the next random dot. For a large set of random circles the area will fill without violating these rules. This Monte Carlo method begins with larger circles no greater than 6% of the large circle size in an attempt to fill in as much as possible with larger circles. Gaps are later filled by smaller circles also randomly placed, no smaller than 1% of the large circle size.  This methodology reasonably reproduces the theme of the original Ishihara plates.   
@@ -54,7 +55,7 @@ For each circle, a set of booleans is stored which describes if the circle is wi
 
 <h3>Getting points out of an SVG file</h3>
 
-An SVG file is a specially formatted XML document which can be parsed into a vector graphic.  The outline of most objects in this format is defined by a 'path' tag. A 'path' contains a representative Bezier curve, spline or line. As higher order curves (<i>e.g.</i> parabolas and splines) require higher order root solving (cubic or quartic root) to find the intersection with circles, the goal is to reduce the vector graphic to straight lines. This simplification only requires extracting the endpoints which I assume are the vertices of lines. The start and end points of every separate curve in a path is extracted and stored in a separate file as an array. Thus it is important to reduce said SVG picture to a sufficient number of straight-line segments which accurately reflect the image.
+An SVG file is a specially formatted XML document which can be parsed into a vector graphic.  The outline of most objects in this format is defined by a 'path' tag. A 'path' contains a representative Bezier curve, spline or line. As higher order curves (<i>e.g.</i> parabolas and splines) require higher order root solving (cubic or quartic root) to find the intersection with circles, the goal is to reduce the vector graphic to straight lines. This simplification only requires extracting the endpoints which I assume are the vertices. The start and end points of every separate curve in a path is extracted and stored in a separate file as an array. Thus it is important to reduce said SVG picture to a sufficient number of straight-line segments which accurately reflect the image.
 
 It was easier for a limited number of SVGs (or a simple shape) to extract the paths via the <a href="https://docs.python.org/2/library/xml.dom.minidom.html"> native python xml interface<a/> and the judicious use of string parsing to yield the end points. The points of the vertices are not large in number, and can be convieniently stored as a python pickle file.
 
@@ -67,13 +68,20 @@ A really useful stack overflow post: <a href="http://stackoverflow.com/questions
 Now that there is a methodology for generating the dots, testing them, and separating them in the proper groups, what colors should we use?  Since I am not colorblind myself, the easiest solution is to extract colors from a true Ishihara plate and use those. From asking my students, the hardest to discern were using a dark and light color of red and of green. The hex colors I used were:
 
 <ul>	 
-  <li> Dark Red - <font color="#c1152d"> #c1152d </font> </li>
+  <li>Dark Red - <font color="#c1152d"> #c1152d </font> </li>
   <li>Light Red - <font color="#e2644e"> #e2644e </font> </li>
   <li>Dark Green - <font color="#008d37"> #008d37 </font> </li>
   <li>Light Green - <font color="#7cbc4a"> #7cbc4a </font> </li>
 </ul>
 
-Slow-carb cornhole crucifix thundercats intelligentsia. Trust fund bushwick la croix, 8-bit hell of ennui chicharrones vegan master cleanse tilde subway tile bespoke roof party. Next level celiac bushwick coloring book subway tile. Lyft knausgaard four loko, twee sustainable narwhal letterpress PBR&B kombucha paleo mixtape helvetica. Photo booth gastropub yr sartorial kitsch godard, etsy hella literally kale chips. Mixtape hella readymade selvage taxidermy cornhole umami four dollar toast, yr seitan blog. Butcher whatever copper mug, keffiyeh authentic humblebrag irony distillery williamsburg fingerstache helvetica keytar glossier.
+Each dot was randomly assigned to be light or dark and given red or green based off of what polygon it was in. I tested a number of random dark/light distributions in order to make it as hard to see as possible (thanks to my 'test-subjects'). The original image is a black and white of silhouette infront of a moon.
+
+<figure>
+  <img src="https://unsplash.it/2000/1200?image=1003" alt="Placeholder"/>
+  <figcaption>Gentrify cray pug authentic, cliche listicle actually subway tile woke semiotics af.</figcaption>
+</figure>
+
+The output after putting it all together
 
 <figure>
   <img src="https://unsplash.it/2000/1200?image=1003" alt="Placeholder"/>
