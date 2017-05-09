@@ -46,7 +46,6 @@ $$R^2 = (lv_1)^2+v_2^2-2l\vec{v}_1\cdot\vec{v}_2$$
 
 Astute people will notice the second equation is the vector form of the <a href="https://en.wikipedia.org/wiki/Law_of_cosines">law of cosines</a>. This equation is quadratic in $$l$$ and can be readily solved for.  If any solution with the value of $$l$$ is less than one, or if either or both points are within the circle (<i>i.e.</i> $$(\vec{x}_c - \vec{x}_0)^2 < R^2)$$ or $$(\vec{x}_c - \vec{x}_1)^2 < R^2)$$) the circle is removed. This test must be ran for every line which defines the object. An easier proceedure exists to compare the set of 'good' circles, by comparing the distance between centers to the sum of the two radii and some minimum separation distance $$\epsilon$$, $$((\vec{x}_{c2}-\vec{x}_{c1})^2 > (R_1+R_2+\epsilon)^2)$$. Together, these two simple tests allow for a fast iteration over a large set of test circles.
 
-
 <h3>How to tell if a circle is within an object</h3>
 
 Once a valid circle is added to the set of other valid circles, the region of the circle needs to be determined for its coloring. Luckily this is a solved problem, with many available versions in many different codes. The problem is known as the '<a href="https://en.wikipedia.org/wiki/Point_in_polygon"> point in polygon </a>' problem. The essence of the solution is starting from the point, drawing a line to infinity, and counting the number of times it crosses the boundary of the object. If the total is even, it is outside and vice versa. A much more rigorous theorem associated with it known as the <a href="https://en.wikipedia.org/wiki/Jordan_curve_theorem"> Jordan curve theorem</a>. Rather than regurgitate the contents of other websites, its better to click these links and see the other (better) explanations. <a href="https://jrwalk.github.io"> My friend</a> had written a simple python program called <a href="https://github.com/PSFCPlasmaTools/eqtools/blob/master/eqtools/core.py#L222"> inPolygon </a> (there is a widely known MATLAB program with the same name and function) which we had used in a collaborative code and I simply reused it.
@@ -63,7 +62,7 @@ A good guide to SVG file paths: <a href="https://developer.mozilla.org/en-US/doc
 
 A really useful stack overflow post: <a href="http://stackoverflow.com/questions/15857818/python-svg-parser"> http://stackoverflow.com/questions/15857818/python-svg-parser </a>
 
-<h3>Proper coloring for the colorblind</h3>
+<h3>Putting it all together</h3>
 
 Now that there is a methodology for generating the dots, testing them, and separating them in the proper groups, what colors should we use?  Since I am not colorblind myself
 
