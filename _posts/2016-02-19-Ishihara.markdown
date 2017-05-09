@@ -66,14 +66,12 @@ A really useful stack overflow post: <a href="http://stackoverflow.com/questions
 
 Now that there is a methodology for generating the dots, testing them, and separating them in the proper groups, what colors should we use?  Since I am not colorblind myself, the easiest solution is to extract colors from a true Ishihara plate and use those. From asking my students, the hardest to discern were using a dark and light color of red and of green. The hex colors I used were:
 
-Dark Red - <font color="#c1152d"> #c1152d </font>
-
-Light Red - <font color="#e2644e"> #e2644e </font>
-
-Dark Green - <font color="#008d37"> #008d37 </font>
-
-Light Green - <font color="#7cbc4a"> #7cbc4a </font>
-
+<ul>	 
+  <li> Dark Red - <font color="#c1152d"> #c1152d </font> </li>
+  <li>Light Red - <font color="#e2644e"> #e2644e </font> </li>
+  <li>Dark Green - <font color="#008d37"> #008d37 </font> </li>
+  <li>Light Green - <font color="#7cbc4a"> #7cbc4a </font> </li>
+</ul>
 
 Slow-carb cornhole crucifix thundercats intelligentsia. Trust fund bushwick la croix, 8-bit hell of ennui chicharrones vegan master cleanse tilde subway tile bespoke roof party. Next level celiac bushwick coloring book subway tile. Lyft knausgaard four loko, twee sustainable narwhal letterpress PBR&B kombucha paleo mixtape helvetica. Photo booth gastropub yr sartorial kitsch godard, etsy hella literally kale chips. Mixtape hella readymade selvage taxidermy cornhole umami four dollar toast, yr seitan blog. Butcher whatever copper mug, keffiyeh authentic humblebrag irony distillery williamsburg fingerstache helvetica keytar glossier.
 
