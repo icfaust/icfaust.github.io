@@ -14,13 +14,13 @@ I wanted a straightforward, easy-to-install, and fast way of calculating <a href
 This required the following:
 
 <ul>
-  <li>Blep1</li>
+  <li>An easy object-oriented interface</li>
   <li>Inclusion of finite differences and sorting</li>
-  <li>Interface with f2py</li>
+  <li>Interfacing with f2py</li>
   <li>Managing boundary conditions</li>
 </ul>
 
- While there are implementations of tricubic interpolation</a> in a number of languages (including Python), there wasn't one that matched all of these requirements. Building off the original work by <i>Lekien and Marsden </i> I added an additional. 
+While there are implementations of tricubic interpolation</a> in a number of languages (including Python), there wasn't one that matched all of these requirements.   Building off the original work by <i>Lekien and Marsden </i> I added an additional. 
 
 
 <h3>Subway tile</h3>
