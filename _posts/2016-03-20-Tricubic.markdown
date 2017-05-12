@@ -9,7 +9,7 @@ image: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_scree
 image-sm: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/tspline.png
 ---
 
-I wanted a straightforward, easy-to-install, and fast way of calculating <a href="https://en.wikipedia.org/wiki/Tricubic_interpolation">tricubic interpolants</a> on a three dimensional <a href="https://en.wikipedia.org/wiki/Regular_grid">regular grid</a> in Python and set out to do it myself. I wrote one in C which could be accessed by numpy using f2py, and can compete or beat the <a href="http://www.netlib.org/dierckx/"> equivalent bicubic interpolating splines</a> in scipy in speed (in some cases) through the addition of a finite difference matrix and an optimization through coefficient reuse.
+I wanted a straightforward, easy-to-install, and fast way of calculating <a href="https://en.wikipedia.org/wiki/Tricubic_interpolation">tricubic interpolants</a> on a three dimensional <a href="https://en.wikipedia.org/wiki/Regular_grid">regular grid</a> in Python and set out to do it myself. I wrote one in C which could be accessed by numpy using f2py, and it can compete or beat the <a href="http://www.netlib.org/dierckx/"> equivalent bicubic interpolating splines</a> in scipy in speed (in some cases) through the addition of a finite difference matrix and by coefficient reuse.
 
 This required the following:
 
