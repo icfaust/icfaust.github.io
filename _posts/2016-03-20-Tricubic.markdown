@@ -9,7 +9,7 @@ image: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_scree
 image-sm: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/tspline.png
 ---
 
-I wanted a straightforward, easy-to-install, and fast way of calculating <a href="https://en.wikipedia.org/wiki/Tricubic_interpolation">tricubic interpolants</a> on a three dimensional <a href="https://en.wikipedia.org/wiki/Regular_grid">regular grid</a> in Python and set out to do it myself. I wrote one in C which could be accessed by numpy using f2py, and it can compete or beat the <a href="http://www.netlib.org/dierckx/"> equivalent bicubic interpolating splines</a> in scipy in speed (in some cases) through the addition of a finite difference matrix and by coefficient reuse.
+I wanted a straightforward, easy-to-install, and fast way of calculating <a href="https://en.wikipedia.org/wiki/Tricubic_interpolation">tricubic interpolants</a> on a three dimensional <a href="https://en.wikipedia.org/wiki/Regular_grid">regular grid</a> in Python and set out to do it myself. I wrote one in C which could be accessed by numpy using f2py, and it can compete or beat the <a href="http://www.netlib.org/dierckx/"> equivalent bicubic interpolating splines</a> in scipy in speed (in some cases). The increased speed came through the addition of a finite difference matrix and by coefficient reuse.
 
 This required the following:
 
@@ -20,10 +20,11 @@ This required the following:
   <li>Managing boundary conditions</li>
 </ul>
 
-While there are implementations of tricubic interpolation</a> in a number of languages (including Python), there wasn't one that matched all of these requirements.   Building off the original work by <i>Lekien and Marsden </i> I added an additional. 
+While there are implementations of tricubic interpolation in a number of languages (including <a href="https://www.ee.ucl.ac.uk/~mflanaga/java/TriCubicSpline.html">java</a>, <a href="https://github.com/danielguterding/pytricubic">C++ and Python</a>), there wasn't one that matched all of these requirements. Completing this task was actually more difficult that I had originally imagined, first off the original work by <a href="http://onlinelibrary.wiley.com/doi/10.1002/nme.1296/abstract"> <i>Lekien and Marsden </i> </a> did not include the necessary original matrix needed for the interpolation in the paper (as it is as 64x64 matrix) and the linked website containg the matrix no longer exists (though someone seems to have found a version and pushed it to <a href="https://github.com/nbigaouette/libtricubic">Github</a>). After finding it after some searching, I went to work.
 
+Initially I need to say that my version builds from Lekien's original, so in a way this isn't something groundbreaking. However, I extend it by making it more user friendly with vector and arrays, iterates through the evaluation in a somewhat intelligent way, and speeds the derivative calculations for a regular grid by including a finite difference calculation in the spline coefficient calculation (removing all need for calculating derivatives). All of these really help to serve in making it more reasonable to work with.
 
-<h3>Subway tile</h3>
+<h3>Interdependency is your enemy</h3>
 Knausgaard readymade williamsburg tote bag taxidermy, DIY meditation copper mug. Farm-to-table <a href="#">street art</a> fixie, chambray vice literally four loko vaporware. Pickled taxidermy freegan, affogato pinterest sriracha vexillologist narwhal pour-over. Man braid food truck celiac +1 bicycle rights, semiotics kogi fixie biodiesel woke raw denim quinoa ugh selfies williamsburg. Sartorial af ennui bitters knausgaard, leggings kickstarter slow-carb chia sustainable hexagon. Prism 3 wolf moon occupy ramps wayfarers tumblr narwhal 90's. Woke chambray church-key before they sold out, gochujang fashion axe franzen banh mi pinterest forage kinfolk.
 
 <figure>
