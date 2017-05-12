@@ -28,13 +28,23 @@ The reason why its written in C is three-fold. First, the original was written i
 
 <h3>Dependency can be your enemy</h3>
 
-One things that bugs me a lot are software packages which require a lot of other programs to be installed to operate.  When working on a stable system which is relatively common (like a standard architecture computer with a reasonable operating system) there are usually no problems.  Most of the time you can even get a precompiled binary. If you go to a rarer system type, whether its Solaris, a weird linux distro or an older i386 computer, the higher the probability you will run into an issue and you will have to install by hand. The operation and installation of your software is now determined by the operability and install-ability of someone else's work. The weak link in the robustness of your software moves into a distint region of 'unknown unknowns'. Nothing annoys me more than trying to solve a clash between source code and a specific architecture for code I haven't written. In this way dependency of code can really be an enemy.
+One things that bugs me a lot are software packages which require a lot of other programs to be installed to operate.  When working on a stable system which is relatively common (like a standard architecture computer with a reasonable operating system) there are usually no problems.  Most of the time you can even get a precompiled binary. But if you go to a rarer system type, whether its Solaris, a weird linux distro or an older i386 computer, the higher the probability you will run into an issue and you will have to install by hand. The operation and installation of your software is now determined by the operability and install-ability of someone else's work. The weak link in the robustness of your software moves into a distint region of 'unknown unknowns'. Nothing annoys me more than trying to solve a clash between source code and a specific architecture for code I haven't written. In this way dependency of code can really be an enemy.
 
 It is my opinion that code should be written to depend on as few packages as possible to operate and should focus on using dependable, common and vetted software to build off of. The more mainstream the package, the more likely that there is someone else who has already faced the problem and solved it (super important for Solaris and stackoverflow).
 
 On the other hand, there is something to be said for not 'reinventing the wheel'. For example, you will never beat BLAS/ATLAS at doing matrix methods, so don't do your own QR decomposition algorithm. However, in any case that you do find a 'plug and play' solution, ask yourself if it is worth it. The answer can be highly contextual too: if it is personal scripting for a specific problem then installing the package and using it is probably a good idea.  If you want some code for others to routinely use for an indeterminant amount of time, its probably a bad choice.
 
-This long-winded philosophical diatribe is a motivation for the use of f2py. f2py is a program which can compile FORTRAN and C code for use in numpy/Python. Numpy is very commonly installed with python for scientific computing. In this case, I knew that others would be using my software on any number of operating systems and computers. Therefore by having it only depend on one code ontop of Python, and being extremely common would greatly simplify installation and debugging. This interfacing code is utilized extensively for giving python some 'speed' by relying on the underlying speed of FORTRAN. 
+This long-winded philosophical diatribe is a motivation for the use of f2py. f2py is a program which can compile FORTRAN and C code for use in numpy/Python. Numpy is very commonly installed with python for scientific computing. In this case, I knew that others would be using my software on any number of operating systems and computers. Therefore by having it only depend on one code ontop of Python, and being extremely common would greatly simplify installation and debugging. This interfacing code is utilized extensively for giving python some 'speed' by relying on the underlying speed of FORTRAN.
+
+f2py and C is less common, but 
+
+<blockquote>
+  <pre>
+    <code>
+       f2py -c _tricub.pyf _tricub.c
+    </code>
+  </pre>
+</blockquote>
 
 
 
