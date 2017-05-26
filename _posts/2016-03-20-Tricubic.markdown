@@ -9,7 +9,7 @@ image: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_scree
 image-sm: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/tspline.png
 ---
 
-I wanted a straightforward, easy-to-install, and fast way of calculating <a href="https://en.wikipedia.org/wiki/Tricubic_interpolation">tricubic interpolants</a> on a three dimensional <a href="https://en.wikipedia.org/wiki/Regular_grid">regular grid</a> in Python and set out to do it myself. I wrote one in C which could be accessed by numpy using f2py, and it can compete or beat the <a href="http://www.netlib.org/dierckx/"> equivalent bicubic interpolating splines</a> in scipy in speed (in some cases). The increased speed came through the addition of a finite difference matrix and by coefficient reuse.
+I wanted a straightforward, easy-to-install, and fast way of calculating <a href="https://en.wikipedia.org/wiki/Tricubic_interpolation">tricubic interpolants</a> on a three dimensional <a href="https://en.wikipedia.org/wiki/Regular_grid">regular grid</a> in Python and set out to do it myself. I extended the original code in C to be accessible by numpy using f2py, and it can compete or beat the <a href="http://www.netlib.org/dierckx/"> equivalent bicubic interpolating splines</a> in scipy in speed (in some cases). The increased speed came through the addition of a finite difference matrix and by coefficient reuse.
 
 This required the following:
 
@@ -20,9 +20,9 @@ This required the following:
   <li>Managing boundary conditions</li>
 </ul>
 
-While there are implementations of tricubic interpolation in a number of languages (including <a href="https://www.ee.ucl.ac.uk/~mflanaga/java/TriCubicSpline.html">java</a>, <a href="https://github.com/danielguterding/pytricubic">C++ and Python</a>), there wasn't one that matched all of these requirements. Completing this task was actually more difficult that I had originally imagined, first off the original work by <a href="http://onlinelibrary.wiley.com/doi/10.1002/nme.1296/abstract"> <i>Lekien and Marsden </i> </a> did not include the necessary original matrix needed for the interpolation in the paper (as it is as 64x64 matrix) and the linked website containg the matrix no longer exists (though someone seems to have found a version and pushed it to <a href="https://github.com/nbigaouette/libtricubic">Github</a>). After finding it after some searching, I went to work.
+While there are implementations of tricubic interpolation in a number of languages (including <a href="https://www.ee.ucl.ac.uk/~mflanaga/java/TriCubicSpline.html">java</a>, <a href="https://github.com/danielguterding/pytricubic">C++ and Python</a>), there was not one that matched all of these requirements. Completing this task was actually more difficult that I had originally imagined, first off the original work by <a href="http://onlinelibrary.wiley.com/doi/10.1002/nme.1296/abstract"> <i>Lekien and Marsden </i> </a> did not include the necessary original matrix needed for the interpolation in the paper (as it is as 64x64 matrix) and the linked website containg the matrix no longer exists (though someone seems to have found a version and pushed it to <a href="https://github.com/nbigaouette/libtricubic">Github</a>). After finding it after some searching, I went to work.
 
-Initially I need to say that my version builds from Lekien's original, so in a way this isn't something groundbreaking. However, I extend it by making it more user friendly with vector and arrays, iterates through the evaluation in a somewhat intelligent way, and speeds the derivative calculations for a regular grid by including a finite difference calculation in the spline coefficient calculation (removing all need for calculating derivatives). All of these really help to serve in making it more reasonable to work with.
+My version builds directly from Lekien's original, and in a way this work is not something groundbreaking. However, I extend it by making it more user friendly with vector and arrays, iterates through the evaluation in a somewhat intelligent way, and speeds the derivative calculations for a regular grid by including a finite difference calculation in the spline coefficient calculation (removing all need for calculating derivatives). Finally, I make it easily accessible to a scripting language. All of these really help to serve in making it more reasonable to work with.
 
 The reason why its written in C is three-fold. First, the original was written in C and was a good starting point (allowing for progressive debugging of the output to compare against the original). Secondly and most importantly the code needed to be fast enough to compete with other two-dimensional interpolators.  Serious time and effort by many programmers and mathematicians have gone into making extremely fast 2D interpolating schemes in base lower-level languages (<i>e.g.</i> FORTRAN, C and C++). It was my hope to be somewhere in a similar ballpark in speed even though I knew the amount of computation for tricubic interpolation would be greater. Thirdly, C and Python can be directly and natively interfaced easily through the <a href="https://docs.python.org/3/library/ctypes.html">ctypes</a> package and through <a href="https://docs.scipy.org/doc/numpy-dev/f2py/">f2py</a> (part of <a href="http://www.numpy.org/">numpy</a>). This would allow for direct access with Python (also reducing the barrier for its use). 
 
@@ -30,13 +30,13 @@ The reason why its written in C is three-fold. First, the original was written i
 
 One things that bugs me a lot are software packages which require a lot of other programs to be installed to operate.  When working on a stable system which is relatively common (like a standard architecture computer with a reasonable operating system) there are usually no problems.  Most of the time you can even get a precompiled binary. But if you go to a rarer system type, whether its Solaris, a weird linux distro or an older PowerPC computer, the higher the probability you will run into an issue and you will have to install by hand. The operation and installation of your software is now determined by the operability and install-ability of someone else's work. The weak link in the robustness of your software moves into a distinct region of 'unknown unknowns', where you don't know what the problems might be or how to solve them. Nothing annoys me more than trying to solve a clash between source code and a specific architecture for code I haven't written. In this way dependency of code can really be an enemy.
 
-It is my opinion that code should be written to depend on as few packages as possible to operate and should focus on using dependable, common and vetted software to build off of. The more mainstream the package, the more likely that there is someone else who has already faced the problem and solved it (super important for Solaris and stackoverflow).
+It is my opinion that widely distributed code should be written to depend on as few packages as possible to operate and it should focus on using dependable, common and vetted software to build off of. The more mainstream the package, the more likely that there is someone else who has already faced the problem and solved it (super important for Solaris and stackoverflow).
 
-On the other hand, there is something to be said for not 'reinventing the wheel'. For example, you will never beat BLAS/ATLAS at doing matrix methods, so don't do your own QR decomposition algorithm. However, in any case that you do find a 'plug and play' solution, ask yourself if it is worth it. The answer can be highly contextual too: if it is personal scripting for a specific problem then installing the package and using it is probably a good idea.  If you want some code for others to routinely use for an indeterminant amount of time, its probably a bad choice.
+On the other hand, there is something to be said for not 'reinventing the wheel'. For example, you will never beat BLAS/ATLAS at doing matrix methods, so there is no reason do your own QR decomposition algorithm. However, in any case that you do find a 'plug and play' solution in another software package, ask yourself if it is worth it. The answer can be highly contextual too: if it is personal scripting for a specific problem then installing the package and using it is probably a good idea.  If you want some code for others to routinely use for an indeterminant amount of time, its probably a bad choice.  However, if it is standardized and ubiquitous to the point of trivial availability, then this discussion points towards using that code. (For Solaris you'd be surprized, I had to once build LAPACK and BLAS from scratch)
 
-This long-winded philosophical diatribe is a motivation for the use of f2py. f2py is a program which can compile FORTRAN and C code for use in numpy/Python. Numpy is very commonly installed with python for scientific computing. In this case, I knew that others would be using my software on any number of operating systems and computers. Therefore by having it only depend on one code ontop of Python, and being extremely common would greatly simplify installation and debugging. This interfacing code is utilized extensively for giving python some 'speed' by relying on the underlying speed of FORTRAN.
+This long-winded philosophical diatribe is a motivation for the use of f2py. f2py is a program which can compile FORTRAN and C code for use in numpy/Python. Numpy is very commonly installed with python for scientific computing. In this case, I knew that others would be using my software on any number of operating systems and computers. Therefore by having it only depend on one code ontop of Python and being extremely common would greatly simplify installation and debugging. This interfacing code is utilized extensively for giving Python some 'speed' by relying on the underlying speed of FORTRAN.
 
-f2py and C is less common, but 
+f2py and C is less common, but there are <a href="https://scipy.github.io/old-wiki/pages/Cookbook/f2py_and_NumPy.html">guides</a>.  The only additional file necessary is a .pyf file which provides the necessary 'glue' for f2py to work.
 
 <blockquote>
   <pre>
@@ -46,30 +46,28 @@ f2py and C is less common, but
   </pre>
 </blockquote>
 
+is all that is needed to compile my code for use.  It even works easily with setup.py and pip installs. Again, it is super easy entry for a non-developer to use.  It generates a .dll file in Windows or a .so file on UNIX systems, which is then easily accessible by Python and other codes for use. This is a similar approach utilized by scipy and numpy for optimized routines.
+
+<h3>Simple optimizations for regular grids</h3>
+
+The work by <i> Lekien and Marsden </i> was generalized to interpolate the value of a point within any voxel where certain values at the vertices are known (in a cartilinear geometry).  This means that the original code requires the input of various derivatives at the corners of the voxel, and as a consequence need to be generated ahead of time. Most, if not all current implementations of the <i> Lekien and Marsden </i> algorithm use a separate mathematical calculation for the generation of the necessary derivatives. Derivatives represent 56 of the 64 needed values, and these 56 values are generated from finite differences.  These values create a 64x1 vector $$v$$ which is multiplied by 64x64 matrix given by <i> Lekien and Marsden </i> known as $$A^{-1}$$. This calculated yields the necessary coefficients to the various cubic polynomials $$p$$.
+
+$$p = A^{-1} \cdot v$$
+
+In the case of a regular grid, a finite difference matrix can be used to reduce the necessary calculations necessary for the interpolation. The generation of the $$v$$ vector is a simple 64x64 matrix multiplation dependent on the surrounding 3x3x3 grid of voxels (4x4x4 grid of vertices). The values of these vertices are given by $$x$$. Generating the coefficients $$p$$ takes the following form (if $$B$$ is finite difference matrix):
+
+$$ p = A^{-1} \cdot ( B \cdot x )$$
+
+The commutative nature of matrix multiplication allows for the definition of a new matrix $$A^{*-1} = A^{-1} \cdot B$$. This combined matrix removes all necessary calculation of derivatives by incorporating them in the matrix multiplication needed to form the polynomial coefficients, and is defined as $$A_2^{-1}$$. Essentially, the mathematical difficulty in generating $$A_2^{-1}$$ removes the work necessary in the numerical calculation of the derivatives.
+
+$$A_2^{-1}$$ is defined for a specific ordering of the 3x3x3 voxel matrix, and can be readily redefined for different ordering schemes.  In my definition I assumed that the axis `closest' in memory is dominant with a heirarchical scheme similar for the other two axes.  These seemed to be the most straightforward. It should be noted, however, that a specific ordering of the vertices is expected in the $$x$$ vector.
+
+A second way of quickly reducing computation is to reuse coefficients after their initial calculation.  On a regular grid, it is straightforward to find, sort and group the various points into specific voxels using standardized C sort functions. Once the coefficients are derived for a specific voxel, the interpolated value is simply an iteration and summation of the polynomials. W
+
+<h3>Pesky edges and neumann boundary conditions</h3>
+
+In nearly all implementations of the <i> Leiken and Marsden </i> tricubic interpolation, it is assumed that all the necessary derivatives can be easily calculated from the input data arrays. Similarly, the regular grid implementation use of $$A_2^{-1}$$ assumes similarly.  When bodering the edge of the data grid, the needed 3x3x3 voxel group cannot be generated.  Similar issues exist for cubic and bicubic splines when close to the boundaries.  Schemes near the borders in those splines can be implemented for tricbuic splines. These schemes make assumptions about the nature of the missing data. A Neumann boundary condition solution was implemented in the Tricubic implementation in order to guarantee operability of the code within the defined grid, even in edge conditions.
 
 
+<h3> Putting it all together</h3>
 
-By simplifying and speeding the coding experience
-
-<figure>
-  <img src="https://unsplash.it/2000/1200?image=1003" alt="Placeholder"/>
-</figure>
-
-Meh food truck tofu succulents, literally waistcoat skateboard poke pop-up cold-pressed put a bird on it cliche umami cornhole kale chips. Man braid 8-bit irony selvage, butcher blog everyday carry. Af meggings tacos ugh la croix skateboard. Biodiesel paleo prism kombucha seitan drinking vinegar. Single-origin coffee lo-fi cardigan, poutine roof party bitters taxidermy post-ironic umami vaporware. Austin edison bulb leggings cliche. Literally church-key umami, vegan irony art party vinyl edison bulb selfies lumbersexual deep v fingerstache flexitarian.
-
-<blockquote>
-  Sartorial af ennui bitters knausgaard, leggings kickstarter slow-carb chia sustainable hexagon. Prism 3 wolf moon occupy ramps wayfarers tumblr narwhal 90's.
-  <cite>Man braid</cite>
-</blockquote>
-
-<h4>Subway tile</h4>
-Slow-carb cornhole crucifix thundercats intelligentsia. Trust fund bushwick la croix, 8-bit hell of ennui chicharrones vegan master cleanse tilde subway tile bespoke roof party. Next level celiac bushwick coloring book subway tile. Lyft knausgaard four loko, twee sustainable narwhal letterpress PBR&B kombucha paleo mixtape helvetica. Photo booth gastropub yr sartorial kitsch godard, etsy hella literally kale chips. Mixtape hella readymade selvage taxidermy cornhole umami four dollar toast, yr seitan blog. Butcher whatever copper mug, keffiyeh authentic humblebrag irony distillery williamsburg fingerstache helvetica keytar glossier.
-
-<figure>
-  <img src="https://unsplash.it/2000/1200?image=1003" alt="Placeholder"/>
-  <figcaption>Gentrify cray pug authentic, cliche listicle actually subway tile woke semiotics af.</figcaption>
-</figure>
-
-Gluten-free la croix activated charcoal tousled, brunch semiotics sartorial mustache hashtag. Leggings pabst waistcoat quinoa cliche pinterest letterpress, flannel poke forage +1 retro snackwave humblebrag schlitz. Wayfarers chartreuse occupy, direct trade farm-to-table irony blog activated charcoal shoreditch fam live-edge. Intelligentsia scenester gochujang gentrify portland offal. Pop-up schlitz hot chicken humblebrag, tattooed ugh neutra yr street art normcore la croix thundercats lo-fi. Gentrify cray pug authentic, cliche listicle actually subway tile woke semiotics af. Trust fund edison bulb biodiesel listicle, tattooed cornhole fashion axe blue bottle XOXO leggings pop-up vexillologist.
-
-Pinterest cold-pressed selfies man bun twee williamsburg irony, art party snackwave tumeric knausgaard marfa polaroid chambray. PBR&B semiotics selvage brooklyn hexagon cray. Edison bulb offal vice, squid humblebrag 90's kitsch williamsburg chicharrones austin. Poke 3 wolf moon selfies banh mi farm-to-table raclette. +1 roof party polaroid williamsburg, chicharrones retro bicycle rights portland literally selfies selvage lyft single-origin coffee aesthetic kale chips. Blog yr la croix four loko beard. Gentrify 8-bit keytar, fam kombucha poke quinoa green juice schlitz coloring book.
