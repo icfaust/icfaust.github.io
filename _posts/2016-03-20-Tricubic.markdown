@@ -60,7 +60,7 @@ $$ p = A^{-1} \cdot ( B \cdot x )$$
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/a_and_a2_plots.png" alt="A and A2 matricies"/>
-    <figcaption> $$A^{-1}$$ and $$A^{-1}_2$$</figcaption>
+    <figcaption> The matricies $$A^{-1}$$ and $$A^{-1}_2$$</figcaption>
   </figure>
 
 
