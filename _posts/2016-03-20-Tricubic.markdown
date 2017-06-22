@@ -59,7 +59,7 @@ In the case of a regular grid, a finite difference matrix can be used to reduce 
 $$ p = A^{-1} \cdot ( B \cdot x )$$
 
   <figure>
-    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/a_and_a2_plot.png" alt="A and A2 matricies"/>
+    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/a_and_a2_plots.png" alt="A and A2 matricies"/>
     <figcaption> $$A^{-1}$$ and $$A^{-1}_2$$</figcaption>
   </figure>
 
@@ -84,9 +84,9 @@ Other more complicated (and possibly more accurate) methods exist for generating
 
 <h3> Putting it all together</h3>
 
-The tricubic interpolation algorithm is included in the Eqtools package.  This package is meant to map and characterize two dimensional tokamak coordinate systems called equilibria. This mapping utilizes interpolation on a two dimensional grid to determine the a value which is converted into another coordinate system of interest.  Often, multiple two dimensional grids are available at various times creating a time evolution of a tokamak plasma. In normal implementations, the mapping of a point occurs in the grid nearest in time. This creates discontinuties which can affect time-dependent phenomenon.
+The tricubic interpolation algorithm is included in the Eqtools package.  This package is meant to map and characterize two dimensional tokamak coordinate systems (a type of toroidally symmetric magnetic fusion power device) called equilibria. This mapping utilizes interpolation on a two dimensional grid to determine the a value which is converted into another coordinate system of interest.  Often, multiple two dimensional grids are available at various times creating a time evolution of a tokamak plasma. In normal implementations, the mapping of a point occurs in the grid nearest in time. This creates discontinuities which can affect time-dependent phenomenon.
 
-The time dependent data is three-dimensional and can be spline interpolated in time as well, providing continuous and smooth solutions.  This was put on display in the publication which first described the Eqtools package.  In it, several calculated equilibria are dramatically over a time series. The shape of surfaces of plasma within the tokamak are shown in blue.  The data given by the nearest neighbor interpolation is rough in time with many discontinuities. However, the tricubic interpolation has smooth variation.
+The time dependent data is three-dimensional and can also now be spline interpolated in time, providing continuous and smooth solutions.  This was put on display in the publication which first described the Eqtools package.  In it, several calculated equilibria are dramatically over a time series. The shape of surfaces of the plasma within the tokamak are shown in shades of blue.  The 3D data given by the nearest neighbor interpolation is rough in time with many discontinuities. However, the tricubic interpolation example has smooth variation.
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/tspline.png" alt="Comparison results png"/>
