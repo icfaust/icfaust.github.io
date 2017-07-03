@@ -64,7 +64,7 @@ $$ p = A^{-1} \cdot ( B \cdot x )$$
   </figure>
 
 
-The commutative nature of matrix multiplication allows for the definition of a new matrix $$A^{-1}_2 = A^{-1} \cdot B$$. This combined matrix removes all necessary calculation of derivatives by incorporating them in the matrix multiplication needed to form the polynomial coefficients; this new matrix is defined as $$A_2^{-1}$$. Essentially, the mathematical difficulty in generating $$A_2^{-1}$$ removes the work necessary in the numerical calculation of the derivatives. (However, in practice $$A_2^{-1}$$ is an integer matrix, and requires a division by 8 to yield the correct values.)
+The associative property of matrix multiplication allows for the definition of a new matrix $$A^{-1}_2 = A^{-1} \cdot B$$. This combined matrix removes all necessary calculation of derivatives by incorporating them in the matrix multiplication needed to form the polynomial coefficients; this new matrix is defined as $$A_2^{-1}$$. Essentially, the mathematical difficulty in generating $$A_2^{-1}$$ removes the work necessary in the numerical calculation of the derivatives. (However, in practice $$A_2^{-1}$$ is an integer matrix, and requires a division by 8 to yield the correct values.)
 
 $$A_2^{-1}$$ is defined for a specific ordering of the 3x3x3 voxel matrix, and can be readily redefined for different ordering schemes.  In my definition I assumed that the axis `closest' in memory is dominant with a heirarchical scheme similar for the other two axes.  These seemed to be the most straightforward. It should be noted however that a specific ordering of the vertices is expected in the $$x$$ vector. 
 
