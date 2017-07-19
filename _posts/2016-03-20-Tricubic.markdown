@@ -101,8 +101,8 @@ The time dependent data is three-dimensional and can also now be spline interpol
 This shows the power of such tricubic interpolation in the right circumstances.  In naturally regular data sets (where all three axes are consistent), the implementation is extremely useful.  There are other similar data sets which could utilize such a system, such as for ethereal data like smoke, or weather data.  In total, this project was useful for trying to bring tricubic interpolation more mainstream utilization.
 
 You can find the implementation at the following link:
-
+<a href="http://eqtools.readthedocs.io/en/latest/"> Eqtools</a>
 The paper which describes the additions to the original implementation:
-
+<a href="http://www.sciencedirect.com/science/article/pii/S001046551630282X"> Paper </a>
 
 
