@@ -102,6 +102,7 @@ This shows the power of such tricubic interpolation in the right circumstances. 
 
 You can find the implementation at the following link:
 <a href="http://eqtools.readthedocs.io/en/latest/"> Eqtools</a>
+
 The paper which describes the additions to the original implementation:
 <a href="http://www.sciencedirect.com/science/article/pii/S001046551630282X"> Paper </a>
 
