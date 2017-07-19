@@ -78,7 +78,12 @@ In nearly all implementations of the <i> Leiken and Marsden </i> tricubic interp
 
 The simplest and most straightforward approach when data is not available is to assume that the derivatives at the edge conditions are zero.  The easiest way to implement this Neumann condition within the $$A_2^{-1}$$ framework is to pad the grid with additional data at the edges. This data merely replicates the value at the edges and allows for the original algorithm of to be utilized.  In the implemented script the padding of the data with two additional values in all directions originally occured within the initialization of the Python object, but later iterations moved it to the C implementation.  This isolates the necessary computation within a single language in the case that other languages which to interface with the underlying C.
 
-EXAMPLE WEIRD BOUNDARY CONDITIONS
+
+  <figure>
+    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/example_trispline.png" alt="Tricubic example"/>
+    <figcaption> Example fit of sinusoid with noise, blue points are the underlying data, and the green is the interpolated (using a tricubic interpolation).</figcaption>
+  </figure>
+
 
 Other more complicated (and possibly more accurate) methods exist for generating the edge derivatives yielding more `natural' and possibly accurate solutions.  However, I decided that the cost in time for implementing those solutions would be not worth the effort, as well-conditioned reproducitons with splines truly requires higher fidelity data by users.  If the derivatives near the edge are not well-conditioned, then the entire problem may instead be ill-posed.  This simple, quick solution was only meant to yield plausably accurate solutions in the cases where the entire grid is naively interpolated upon.  
 
