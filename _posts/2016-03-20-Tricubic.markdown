@@ -81,7 +81,7 @@ The simplest and most straightforward approach when data is not available is to 
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/example_trispline.png" alt="Tricubic example"/>
-    <figcaption> Example fit of sinusoid with noise, blue points are the underlying data, and the green is the interpolated (using a tricubic interpolation).</figcaption>
+    <figcaption> Example fit of a sinusoid with noise, blue points are the underlying data, and the green is the interpolated curve (using a tricubic interpolation).</figcaption>
   </figure>
 
 
