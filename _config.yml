@@ -19,6 +19,7 @@ linkedin: Ian Faust
 profile: Free from the bonds of grad school with an MIT PhD, he is now open to tinker and experiment.  His projects vary from the basic to the esoteric in coding, design and manufacturing. Currently living in Munich, he is exploring Europe and improving his German.
 social:
 github: icfaust
+linkedin: https://www.linkedin.com/in/ian-faust-99b05519
 
 # Build settings
 exclude: ["_screenshots", "Gemfile", "Gemfile.lock", "LICENSE.txt", "README.md"]
