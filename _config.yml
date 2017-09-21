@@ -34,4 +34,3 @@ sass:
 # Gems
 gems: [jekyll-paginate, jekyll-sitemap, octopress-autoprefixer]
 
-plugins: ./_plugins
