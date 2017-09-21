@@ -16,8 +16,9 @@ The raspberry Pi camera was developed in order to test the capabilities of Raspb
   <li>Point3.</li>
   <li>Point4.</li>
 </ul>
-<iframe id='iframe2' src="https://www.youtube.com/embed/CUfR819hIDg" frameborder="0" style="	height: 100%;
-        width: 100%;"  width="100%"></iframe>
+<div class="video-container"><iframe id='iframe2' src="https://www.youtube.com/embed/CUfR819hIDg"></iframe>
+</div>
+
 <ul>
   <li>Point1.</li>
   <li>Point2.</li>
@@ -25,4 +26,4 @@ The raspberry Pi camera was developed in order to test the capabilities of Raspb
   <li>Point4.</li>
 </ul>
 
-Test text.
+Test text2.
