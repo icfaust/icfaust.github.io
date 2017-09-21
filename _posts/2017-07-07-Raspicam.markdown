@@ -24,3 +24,5 @@ The raspberry Pi camera was developed in order to test the capabilities of Raspb
   <li>Point3.</li>
   <li>Point4.</li>
 </ul>
+
+Test text.
