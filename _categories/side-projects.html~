@@ -1,7 +1,0 @@
----
-layout: default
-title: Side Projects
-description: Side projects at work
-permalink: /category/side-projects/
----
-{% include category.html %}

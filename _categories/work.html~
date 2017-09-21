@@ -1,7 +1,0 @@
----
-layout: default
-title: Coding
-description: Coding projects
-permalink: /category/coding/
----
-{% include category.html %}
