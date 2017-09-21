@@ -8,11 +8,11 @@ description:
 image: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/SPRED_13.2.png
 image-sm: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/SPRED_13.2.png
 ---
-SPRED spectrometer used on the ASDEX-Upgrade tokamak at the Max-Planck Institute for Plasma Physics.
+SPRED spectrometer used on the ASDEX-Upgrade tokamak at the Max-Planck Institute for Plasma Physics. This Vacuum Ultraviolet spectrometer.
 
 <ul>
-  <li>Point1.</li>
-  <li>Point2.</li>
-  <li>Point3.</li>
-  <li>Point4.</li>
+  <li>Point.</li>
+  <li>Point.</li>
+  <li>Point.</li>
+  <li>Point.</li>
 </ul>
