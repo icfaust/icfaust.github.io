@@ -8,14 +8,20 @@ description:
 image: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/1160902011-frames-21.jpg
 image-sm: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/1160902011-frames-21.jpg
 ---
-The raspberry Pi camera was developed in order to test the capabilities of Raspberry Pis. Look at this image!!!
+I integrated Raspberry Pi Cameras with triggering and mounting strucutres for use in the difficult environment of tokamaks. These cameras faced high magnetic fields, intense radiation bombardment, and substantial heat excursions. These simple and low-cost systems were able to outperform older at a dramatically reduced price with simpler implementation.  While the operation of the Raspberry Pi camera is well-documented and straight-forward, I developed additional components and debugged various problems for its operation in such an environment.
+
+This required the following:
 
 <ul>
-  <li>Point1.</li>
-  <li>Point2.</li>
-  <li>Point3.</li>
-  <li>Point4.</li>
+  <li>Coding an interface with experimental data system</li>
+  <li>Design and manufacture of Camera mounting structure</li>
+  <li>Optimization of the Optics for individual views</li>
+  <li>Isolated electrical triggering</li>
+  <li>Placing power supplies away from high magnetic field</li>
 </ul>
+
+The end result of this work is the spactacular disruption as shown in the video (which I uploaded to Youtube).
+
 <div class="video-container"><iframe id='iframe2' src="https://www.youtube.com/embed/CUfR819hIDg"></iframe>
 </div>
 
