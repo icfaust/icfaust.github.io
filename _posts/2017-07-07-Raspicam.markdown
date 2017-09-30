@@ -8,7 +8,7 @@ description:
 image: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/1160902011-frames-21.jpg
 image-sm: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/1160902011-frames-21.jpg
 ---
-I integrated Raspberry Pi Cameras with triggering and mounting strucutres for use in the difficult environment of tokamaks. These cameras faced high magnetic fields, intense radiation bombardment, and substantial heat excursions. These simple and low-cost systems were able to outperform similar older systems at a dramatically reduced price with simpler implementation.  While the operation of the Raspberry Pi camera is well-documented and straight-forward, I developed additional components and debugged various problems for its operation in such an environment.
+I integrated Raspberry Pi Cameras with triggering and mounting strucutres for use in the difficult environment of tokamaks. These cameras faced high magnetic fields, intense radiation bombardment, and substantial heat excursions. These simple and low-cost systems were able to outperform similar older systems at a dramatically reduced price with simpler implementation.  While the operation of the Raspberry Pi camera is well-documented and straight-forward, I developed additional components and solved several problems leading to its operation in a tokamak environment.
 
 This required the following:
 
