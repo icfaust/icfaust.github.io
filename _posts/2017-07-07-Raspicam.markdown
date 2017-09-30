@@ -14,8 +14,8 @@ This required the following:
 
 <ul>
   <li>Coding an interface with experimental data system</li>
-  <li>Design and manufacture of Camera mounting structure</li>
-  <li>Optimization of the Optics for individual views</li>
+  <li>Design and manufacture of camera mounting structure</li>
+  <li>Optimization of the optics for individual views</li>
   <li>Isolated electrical triggering</li>
   <li>Placing power supplies away from high magnetic field</li>
 </ul>
