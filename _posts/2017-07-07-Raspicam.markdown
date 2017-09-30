@@ -8,22 +8,34 @@ description:
 image: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/1160902011-frames-21.jpg
 image-sm: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/1160902011-frames-21.jpg
 ---
-I integrated Raspberry Pi Cameras with triggering and mounts for use in the difficult environment of tokamaks. These cameras faced high magnetic fields, intense radiation bombardment, and substantial heat excursions. These simple and low-cost systems were able to outperform similar older systems at a dramatically reduced price with simpler implementation.  While the operation of the Raspberry Pi camera is well-documented and straight-forward, I developed additional components and solved several problems leading to its operation in a tokamak environment.
+I designed and built equipment necessesary for Raspberry Pi Cameras to operate in the difficult environment of tokamaks. These cameras faced high magnetic fields, intense radiation bombardment, and substantial heat excursions. These simple and low-cost systems were able to outperform similar older systems at a dramatically reduced price with simpler implementation.  While the operation of the Raspberry Pi camera is well-documented and straight-forward, this new equipment interfaced with the computer, electrical and mechanical systems of the Alcator C-Mod tokamak.
 
 This required the following:
 
 <ul>
-  <li>Coding an interface with experimental data system</li>
+  <li>Coding an interface with the experimental data system</li>
   <li>Design and manufacture of camera mounting structure</li>
   <li>Optimization of the optics for individual views</li>
-  <li>Isolated electrical triggering</li>
-  <li>Placing power supplies away from high magnetic field</li>
+  <li>Isolation of the electrical triggering</li>
+  <li>Placing power supplies away from high magnetic fields</li>
 </ul>
 
-The end result of this work is the spactacular disruption as shown in the video (which I uploaded to Youtube).
+The end result of this work can be seen in the spactacular disruptions shown both in the video (which I uploaded to Youtube) and the introductory image at the top of the page. These highlight the camera's robust nature and exhibits the ability of such simple systems to collect such unique and interesting images.
 
 <div class="video-container"><iframe id='iframe2' src="https://www.youtube.com/embed/CUfR819hIDg"></iframe>
 </div>
+
+
+<h3> Design and manufacture of the camera mounting structure </h3>
+
+<h3> Optimization of the optics for individual views </h3>
+
+<h3> Isolation of the electrical triggering </h3>
+
+<h3> Coding an interface with the experiment data system </h3>
+
+<h3> Placing power supples away from high magnetic fields </h3>
+
 
 <ul>
   <li>Point1.</li>
