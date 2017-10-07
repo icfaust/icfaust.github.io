@@ -20,16 +20,22 @@ This required the following:
   <li>Placing power supplies away from high magnetic fields</li>
 </ul>
 
-The end result of this work can be seen in the spactacular conclusion of the plasmas (known as a 'disruption') shown both in the video (which I uploaded to Youtube) and the introductory image at the top of the page. These highlight the camera's robust nature and exhibits the ability of such simple systems to collect such unique and interesting images.
+The end result of this work can be seen in the spactacular conclusion of the plasmas (known as a 'disruption') shown both in the video (which I uploaded to Youtube) and the introductory image at the top of the page. These highlight the camera's robustness and exhibits the ability of such simple systems to collect such unique and interesting images.
 
 <div class="video-container"><iframe id='iframe2' src="https://www.youtube.com/embed/CUfR819hIDg"></iframe>
 </div>
 
 Depending on the settings and optics, it can take high quality 5MP pictures 10 times a second all the way to 640x480 resolution at 90 frames per second. The picture and video are from these two ends of this acquisition spectrum. Limitations in the lenses in this case reduce crisp quality of the full images, but are still spactacular in their own way.  In the end, I installed four of these cameras at various locations around the tokamak, each of which yielding a unique perspective on the world of high-temperature plasma physics.
 
+  <figure>
+    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/necessary_items.jpg" alt="Necessary Items for a single camera system"/>
+    <figcaption>The necessary items needed for an example camera system are shown in this photo.</figcaption>
+  </figure>
+
+
 <h3> Design and manufacture of the camera mounting structure </h3>
 
-Tokamaks often have limite
+Tokamaks often have compilcated and  limited space due to  the extreme mechanical and electromagnetic environment interfacing with vacuum equipment. Optimal placement of  
 
 
 <h3> Optimization of the optics for individual views </h3>
