@@ -29,7 +29,7 @@ Depending on the settings and optics, it can take high quality 5MP pictures 10 t
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/necessary_items.jpg" alt="Necessary Items for a single camera system"/>
-    <figcaption>The necessary items needed for an example camera system are shown in this photo.</figcaption>
+    <figcaption>The necessary items needed for an example camera system are shown in this photo. From Upper left: custom opto-isolation triggering circuit, camera module, 3D-printed camera mount and lens, ethernet cable, 5V USB-micro cellphone charger, mounting screws, camera cable,  MicroSD card, and Raspberry Pi.</figcaption>
   </figure>
 
 
