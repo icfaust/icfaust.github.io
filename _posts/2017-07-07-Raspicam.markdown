@@ -35,7 +35,7 @@ Depending on the settings and optics, it can take high quality 5MP pictures 10 t
 
 <h3> Design and manufacture of the camera mounting structure </h3>
 
-Tokamaks often have compilcated and  limited space due to  the extreme mechanical and electromagnetic environment interfacing with vacuum equipment. Optimal placement of  
+Tokamaks are vacuum chambers which are limited in space due to the surrounding magnets and supporting structure. The extreme mechanical and electromagnetic environment leaves little room to view the plasma, and so the optimal placement of cameras is key.  The camera with optics is placed on a printed circuit board (PCB) which then can be mounted using a typical <a href="https://en.wikipedia.org/wiki/S-mount_(CCTV_lens)"> 'S-mount'</a> 
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IMG_20150612_134352-nopm-.jpg" alt="Double camera system inserted within a reentrant tube"/>
@@ -46,8 +46,6 @@ Tokamaks often have compilcated and  limited space due to  the extreme mechanica
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IMG_20150730_193248427.jpg" alt="Camera mount designed for 2-3/4 in. Conflat flange"/>
     <figcaption>The necessary items needed for an example camera system are shown in this photo.</figcaption>
   </figure>
-
-
 
 
 <h3> Optimization of the optics for individual views </h3>
