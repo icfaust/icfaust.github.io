@@ -70,18 +70,10 @@ If there is anything I've learned while doing circuit testing is that both capac
 
 In the case of the Camera on a tokamak, it is vital that the camera is told to start acquiring images a set time, given by a centralized trigger signal.  This 5V electrical signal needs to be sent to the camera, which can be easily done through the <a href="https://pinout.xyz/">'Raspberry Pi GPIO'</a>.  However, the ground of the triggering signal generator and of the camera are separated.  The high magnetic fields about the tokamak with the large separation of the grounds leads to significant magnetic flux.  This magnetic flux could lead to EMF potentials which could harm the camera.
 
-Electrical isolation of the triggering system from the camera is possible through the use of an <a href="https://en.wikipedia.org/wiki/Opto-isolator">'opto-coupler'</a>.  
+Electrical isolation of the triggering system from the camera is possible through the use of an <a href="https://en.wikipedia.org/wiki/Opto-isolator">'opto-coupler'</a>.  The triggering circut connects to the CAMAC triggering board via a <a href="https://www.lemo.com/">'2-pin LEMO'</a>, which was standard at the PSFC. The Pi's side uses pins 4,6 and 8 to get 5V, a ground, and a GPIO pin close together.
 
 <h3> Coding an interface with the experiment data system </h3>
 
 <h3> Placing power supples away from high magnetic fields </h3>
 
-
-<ul>
-  <li>Point1.</li>
-  <li>Point2.</li>
-  <li>Point3.</li>
-  <li>Point4.</li>
-</ul>
-
-Test text2.
+There are some cases where inductive coupling to the tokamak's magnetic field is inevitable.  One such case is in the power supply of the Raspberry Pi itself. Most commercial 5V power supples for phones use flyback converters with inductors to transform the AC voltage to the necessary 5V DC.
