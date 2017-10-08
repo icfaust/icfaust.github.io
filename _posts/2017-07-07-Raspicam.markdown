@@ -49,7 +49,7 @@ Tokamaks often have compilcated and  limited space due to  the extreme mechanica
   </figure>
 	
   <figure>
-    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IMG_20150730_193248427.jpg" alt="Camera mount designed for 2-3/4 in. Conflat"/>
+    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IMG_20150730_193248427.jpg" alt="Camera mount designed for 2-3/4 in. Conflat flange"/>
     <figcaption>The necessary items needed for an example camera system are shown in this photo.</figcaption>
   </figure>
 
@@ -57,6 +57,12 @@ Tokamaks often have compilcated and  limited space due to  the extreme mechanica
 
 
 <h3> Optimization of the optics for individual views </h3>
+
+  <figure>
+    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/1150624012_udiv_109.jpg" alt="Upper Divertor View during a disruption"/>
+    <figcaption>The necessary items needed for an example camera system are shown in this photo.</figcaption>
+  </figure>
+
 
 <h3> Isolation of the electrical triggering </h3>
 
