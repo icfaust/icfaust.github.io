@@ -39,7 +39,7 @@ Tokamaks are vacuum chambers which are limited in space due to the surrounding m
 	
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IMG_20150730_193248427.jpg" alt="Camera mount designed for 2-3/4 in. Conflat flange"/>
-    <figcaption>A number of cameras were developed to fit onto conflat vacuum flanges. The could be fixed in place using screws on the edge, and the direction of imaging could be changed using the central ball mount.</figcaption>
+    <figcaption>A number of cameras were developed to fit onto conflat vacuum flanges. The are fixed in place using screws around the edge, and the direction of imaging could be changed using the central ball mount.</figcaption>
   </figure>
 
 
