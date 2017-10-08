@@ -71,8 +71,18 @@ In the case of the Camera on a tokamak, it is vital that the camera is told to s
 
 Electrical isolation of the triggering system from the camera is possible through the use of an <a href="https://en.wikipedia.org/wiki/Opto-isolator">'opto-coupler'</a>.  The triggering circut connects to the CAMAC triggering board via a <a href="https://www.lemo.com/">2-pin LEMO</a>, which was standard at the PSFC. The Pi's side uses pins 4,6 and 8 to get 5V, a ground, and a GPIO pin all of which are close together. A simple pull down resistor and a current limiting resistor for the diode are the only other needed parts.
 
-<h3> Coding an interface with the experiment data system </h3>
 
 <h3> Placing power supples away from high magnetic fields </h3>
 
+One of the first posts I read early on in this project was about the use of a Raspberry Pi in an ether
+
 There are some cases where inductive coupling to the tokamak's magnetic field is inevitable.  One such case is in the power supply of the Raspberry Pi itself. Most commercial 5V power supples for phones use flyback converters with inductors to transform the AC voltage to the necessary 5V DC. 
+
+
+<h3> Coding an interface with the experiment data system </h3>
+
+The camera
+  <figure>
+    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/CaF2_1160406013_89_2.jpg" alt="Calcium Flouride Laser-blow-off from April 6, 2016 Shot 13"/>
+    <figcaption>The color of a video was decomposed into Y'UV components, where the brightness (Y') was stored in the Alcator C-Mod data system.</figcaption>
+  </figure>
