@@ -84,5 +84,5 @@ There are some cases where inductive coupling to the tokamak's magnetic field is
 The camera
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/CaF2_1160406013_89_2.jpg" alt="Calcium Flouride Laser-blow-off from April 6, 2016 Shot 13"/>
-    <figcaption>The color of a video was decomposed into Y'UV components, where the brightness (Y') was stored in the Alcator C-Mod data system. Left to right: Original color image, Y' black/white brightness , U Chrominance, V Chrominance. The image is of a Calcium Flouride (CaF2) laser blow off into the plasma as viewed through a port, where the purple sparkles are ionization of the molecule.  The inner wall, the port and several diagnostics can also be seen.</figcaption>
+    <figcaption>The color of a video was decomposed into Y'UV components, where the brightness (Y') was stored in the Alcator C-Mod data system. Left to right: Original color image, Y' black/white brightness, U chrominance, V chrominance. The image is of a calcium flouride (CaF2) laser blow off into the plasma as viewed through a port, where the purple sparkles are ionization of the molecule.  The inner wall, the port and several diagnostics can also be seen.</figcaption>
   </figure>
