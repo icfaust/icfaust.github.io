@@ -49,7 +49,7 @@ The standard lens on the Raspberry Pi is ideal for distances greater than one me
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IMG_20150612_134352-nopm-.jpg" alt="Double camera system inserted within a reentrant tube"/>
-    <figcaption>Two cameras close together have significantly different views. Specific lenses were purchased to yield the views seen in the wo images with flying sparks.  The sizes of the lenses were important to fit within a tube roughly the 3D printed circumference.</figcaption>
+    <figcaption>Two cameras close together have significantly different views. Specific lenses were purchased to yield the following image and the headline image (both with flying sparks).  The sizes of the lenses were important to fit within a tube roughly the 3D printed circumference.</figcaption>
   </figure>
 
 The standard optics for the <a href="https://www.raspberrypi.org/products/camera-module-v2/"> 'Raspberry Pi camera'</a> can be removed with a set of pliers, which exposes the underneath CCD. The screw holes on either side of the CCD on the PCB can mount M12 optics. The optics themselves are sized to fit a M12 hole with .5mm pitch (which is really fine, and required for 3D mounting, I bought mine on  <a href="https://www.amazon.com/Metric-Right-Thread-0-5mm-Pitch/dp/B008570NG6"> Amazon</a> or Aliexpress).  The M12 optics are typical of CCTV systems and can be easily purchased in all sort of shapes and sizes from manufacturers on Alibaba.  The low cost (less than $20 a piece) and ease of interfacing with the manufacturing makes acquiring optics easy. The hardest part is getting the company representatives to leave you alone afterward.
