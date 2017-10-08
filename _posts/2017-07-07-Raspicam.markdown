@@ -37,6 +37,24 @@ Depending on the settings and optics, it can take high quality 5MP pictures 10 t
 
 Tokamaks often have compilcated and  limited space due to  the extreme mechanical and electromagnetic environment interfacing with vacuum equipment. Optimal placement of  
 
+  <figure>
+    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/necessary_items.jpg" alt="Necessary Items for a single camera system"/>
+    <figcaption>The necessary items needed for an example camera system are shown in this photo.</figcaption>
+  </figure>
+
+
+  <figure>
+    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IMG_20150612_134352-nopm-.jpg" alt="Double camera system inserted within a reentrant tube"/>
+    <figcaption>The necessary items needed for an example camera system are shown in this photo.</figcaption>
+  </figure>
+	
+  <figure>
+    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IMG_20150730_193248427.jpg" alt="Camera mount designed for 2-3/4 in. Conflat"/>
+    <figcaption>The necessary items needed for an example camera system are shown in this photo.</figcaption>
+  </figure>
+
+
+
 
 <h3> Optimization of the optics for individual views </h3>
 
