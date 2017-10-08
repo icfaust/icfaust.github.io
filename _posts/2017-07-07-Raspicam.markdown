@@ -45,7 +45,7 @@ Tokamaks are vacuum chambers which are limited in space due to the surrounding m
 
 <h3> Optimization of the optics for individual views </h3>
 
-The standard lens on the Raspberry Pi is ideal for distances greater than one meter with a wide field of view.  The uses of this camera on tokamaks vary from fisheye views to telescopic/focused views, requring alternate optics.  Luckily the PCB was designed to accept other optics, and the choice depends on the desired view. Outside of the optics, the mounting structure can be easily 3D printed and tapped.
+The standard lens on the Raspberry Pi is ideal for distances greater than one meter with a wide field of view.  The uses of this camera on tokamaks vary from fisheye views to telescopic/focused views, requring alternate optics.  Luckily the PCB was designed to accept other optics and the choice depends on the desired view. Outside of the optics, the mounting structure can be easily 3D printed and tapped.
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IMG_20150612_134352-nopm-.jpg" alt="Double camera system inserted within a reentrant tube"/>
