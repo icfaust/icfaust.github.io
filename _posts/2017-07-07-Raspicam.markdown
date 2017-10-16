@@ -74,9 +74,13 @@ Electrical isolation of the triggering system from the camera is possible throug
 
 <h3> Placing power supples away from high magnetic fields </h3>
 
-One of the first posts I read early on in this project was about the use of a Raspberry Pi in an ether
+One of the first posts I read early on in this project was about the use of a <a href="https://www.raspberrypi.org/forums/viewtopic.php?f=41&t=72015"> Raspberry Pi camera in an MRI machine</a>.  In most cases, the magnetic susceptibility of an electronic device is dependent on the use of inductors, whose operation is dictated by storing magnetic energy.  Externally applied magnetic fields can induce voltages in the circuit or can saturate the metallic core (depending on the inductor) both of which can impact its operation.  A Raspberry Pi has inductors in two places: the ethernet 10/100T port and in the power supply. In both cases, the easiest solution is to shield the equipment and move it far from the intense magnetic field.
 
-There are some cases where inductive coupling to the tokamak's magnetic field is inevitable.  One such case is in the power supply of the Raspberry Pi itself. Most commercial 5V power supples for phones use flyback converters with inductors to transform the AC voltage to the necessary 5V DC. 
+Inductive coupling to the tokamak's magnetic field is inevitable, the question is to what degree. The Raspberry Pi uses a micro USB connector which was the most common connector for non-Apple smart phones (which is actively being replaced by the USB Type-C).   Most small commercial 5V power supplies made for phones use <a href="https://en.wikipedia.org/wiki/Flyback_converter"> flyback converters</a> (which have inductors) to transform the AC voltage to the necessary 5V DC.
+
+Interestingly, the very intense magnetic field of tokamaks (in the toroidal direction) are very well contained by the toroidal magnetic field coils. The separate coil which induces a current in the plasma creates a dipole field which spreads broadly in a well known way from the plasma.  If both the Raspberry Pi and power supply are out of the toroidal field coils, it is this field which affects the circuitry.  The power supplies needed an additional 2 or 3 meters radial distance from the tokamak to insure operation during an Alcator C-Mod plasma.  The inductors within the ethernet connector were never a large issue, as the camera only really needed to communicate after the plasma had ended (and magnetic field had been removed). 
+
+As a point of note, the camera head is rather impervious to the magnetic field and was operating reliably in magnetic fields of 5 Tesla.  The data is carried digitally using a 20 pin ffc ribbon cable and it is robust even under radiation and intense temporal changes in the magnetic field.  The camera itself can then be separated from the Raspberry Pi and power supply by distances of several meters (though distances longer than 2 meters were not tested). Again, purchasing it directly from China might allow for some really interesting and low cost use.
 
 
 <h3> Coding an interface with the experiment data system </h3>
