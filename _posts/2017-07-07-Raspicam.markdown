@@ -85,7 +85,11 @@ As a point of note, the camera head is rather impervious to the magnetic field a
 
 <h3> Coding an interface with the experiment data system </h3>
 
-The camera by design is meant for a layman to use in a plug-and-play fashion.  The camera can be controlled using a number of programming language including Python, bash and C/C++
+The camera by design is meant for a layman to used for plug-and-play projects.  The camera can be controlled using a number of programming languages with various APIs including Python, bash and C/C++. From frame rates, to exposures, to white balance, all parameters are controlled through the API to the underlying SDK for the camera interface.  Due to my familiarity and relative ease in debugging, Python was used to interface with the experimental data system, which also has a native Python API.
+
+Alcator C-Mod, and most other tokamaks in the United States (and some abroad) use <a href="http://www.mdsplus.org/index.php/Introduction">MDSplus</a> to control tokamaks and store experimental data.  It has APIs written in a number of languages, with the Python implementation being one of the more expansive and well documented. The MDSplus system is capable of sending broadcast messages over a network to prepare various equipment for a syncronous trigger. A daemon is used to wait for a preparation message which activates a script to set necessary parameters and wait for the trigger pulse. Using the previously described triggering (through the Raspberry Pi GPIO), the camera can also be triggered syncronously.
+
+Before the triggering, a prescribed set of parameters are loaded to the camera (such as the length of the video, quality and frames per second) and the program sets to wait on the GPIO trigger. After the triggering, the file is transferred to a main file server and the video is transformed into a individual black/white intensity images.  These images are stored as 8-bit byte data in the MDSplus data structure for analysis.  
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/CaF2_1160406013_89_2.jpg" alt="Calcium Flouride Laser-blow-off from April 6, 2016 Shot 13"/>
