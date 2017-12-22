@@ -32,7 +32,7 @@ Later a the change in the angle of the second grating was sufficient as to compl
 
 <h3>Reverse engineering the spectrometer without complete disassembly</h3>
 
-Reverse engineering of products, processes and codes have become more and more commonplace worldwide.  Often considered malicious, such engineering is can actually be beneficial is restarting and recovering previously used methods and understanding.  A great example from recent memory is the possible return of the American F-1 rocket engine for possible use by NASA in the STS program.  The shift in the American program to other fuels left little hands-on expertise with hydrocarbon-based systems, and a team by NASA set out to <a href="https://arstechnica.com/science/2013/04/how-nasa-brought-the-monstrous-f-1-moon-rocket-back-to-life/">reverse engineer it</a>. Accurate calibration of the spectrometer 
+Reverse engineering of products, processes and codes have become more and more commonplace worldwide.  Often considered malicious, such engineering is can actually be beneficial is restarting and recovering previously used methods and understanding.  A great example from recent memory is the possible return of the American F-1 rocket engine for possible use by NASA in the STS program.  The shift in the American program to other fuels left little hands-on expertise with hydrocarbon-based systems, and a team by NASA set out to <a href="https://arstechnica.com/science/2013/04/how-nasa-brought-the-monstrous-f-1-moon-rocket-back-to-life/">reverse engineer it</a>. Accurate calibration of the spectrometer which is the only of its kind makes destructive disassembly impossible.
 
 
 <h3>Designing and implementing a system for angluar calibration of a EUV/VUV grating</h3>
@@ -46,10 +46,32 @@ Reverse engineering of products, processes and codes have become more and more c
 <h3>Fixtures for in-place verification</h3>
 
   <!-- Picture exterior with fixture -->
+  <figure>
+    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/out_450.jpg" alt="View"/>
+    <figcaption> Temporary.</figcaption>
+  </figure>
+
   
   <!-- Fully installed picture yep -->
+  <figure>
+    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IMG_20171023_180054.jpg" alt="Not Sure"/>
+    <figcaption> Temporary.</figcaption>
+  </figure>
 
-<h3>Monte Carlo circle placement</h3>
+  
+  <!-- Fully installed picture yep -->
+  <figure>
+    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/SPRED_gratings_comparison.jpg" alt="Not Sure"/>
+    <figcaption> Temporary.</figcaption>
+  </figure>
+
+  
+  <!-- Fully installed picture yep -->
+  <figure>
+    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/SPRED_gratings.JPG" alt="Not Sure"/>
+    <figcaption> Temporary.</figcaption>
+  </figure>
+
 
 <h3>Analysis of spectrometer operation</h3>
 
