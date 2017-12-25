@@ -28,14 +28,33 @@ This project in total was a tough problem as it had the following large issues: 
 
  In my case, the ASDEX-Upgrade SPRED spectrometer had been designed and built by an outside German company, which was supposed to give over the design drawings per contract. However, this company did not comply with this after the delivery and installation of the spectrometer. The spectrometer operated as designed for over 20 years without major issue with the original components.  However, at some period of time, the wavelength being measured began to change. A <a href="https://edoc.ub.uni-muenchen.de/18745/">student thesis</a> around this time was able to correct for this issue and still yield viable results.  The previous micro channel plate (MCP) system used for measurement was replaced by more modern intensified CCDs which have become the norm for these styles of measurements.
 
-Later a the change in the angle of the second grating was sufficient as to completely ruin its ability to properly record useful spectra. At the time it was not known that the angle was the cause in the failure, so attempts were made to diagnose the issue. Due to the relatively bullet-proof nature of its operation, it had been minimally opened for inspection during its years of operation. A new CCD camera was purchased to replace the old MCP and it was finally opened to inspect its interior.  
+Later a the change in the angle of the second grating was sufficient as to completely ruin its ability to properly record useful spectra. At the time it was not known that the angle was the cause in the failure, so attempts were made to diagnose the issue. Due to the relatively bullet-proof nature of its operation, it had been minimally opened for inspection during its years of operation. A new CCD camera was purchased to replace the old MCP and it was finally opened to inspect its interior.  At the time of my introduction, the exterior vacuum housing had been opened, and the old camera system completely removed. At this point, I became the principal investigator in diagnosing and repairing this issue, while integrating the new camera into operation.
 
 <h3>Reverse engineering the spectrometer without complete disassembly</h3>
 
-Reverse engineering of products, processes and codes have become more and more commonplace worldwide.  Often considered malicious, such engineering is can actually be beneficial is restarting and recovering previously used methods and understanding.  A great example from recent memory is the possible return of the American F-1 rocket engine for possible use by NASA in the STS program.  The shift in the American program to other fuels left little hands-on expertise with hydrocarbon-based systems, and a team by NASA set out to <a href="https://arstechnica.com/science/2013/04/how-nasa-brought-the-monstrous-f-1-moon-rocket-back-to-life/">reverse engineer it</a>. Accurate calibration of the spectrometer which is the only of its kind makes destructive disassembly impossible.
+Reverse engineering of products, processes and codes have become more and more commonplace worldwide.  Often considered malicious, such engineering is can actually be beneficial is restarting and recovering previously used methods and understanding.  A great example from recent memory is the possible return of the American F-1 rocket engine for possible use by NASA in the STS program.  The shift in the American program to other fuels left little hands-on expertise with hydrocarbon-based systems, and a team by NASA set out to <a href="https://arstechnica.com/science/2013/04/how-nasa-brought-the-monstrous-f-1-moon-rocket-back-to-life/">reverse engineer it</a>. In a similar situation, I too was responsible to understand the engineering necessary for a previous design and attempt to improve on it. However, a further complication existed in comparison to others, in that the system is one-of-a-kind, requiring an even more conservative approach.
 
+Unlike the rocket engine, the problem was not to characterize the entire product or understand facets of the design, but it was to only to calibrate the grating angle. The disassembly of a precision mechanical component has some chance of irreparably changing it. The spectrometer geometry is principally important for a spectrometer for the focus, sagital and meridonal planes and affect the overall light intensity. Understanding the optics will change the optics. In other words, changes in dissasembly also makes the angular correction a moving target: the more I change, the more that could unknowingly also change the optics.  While this is likely not a large issue for a properly designed piece of hardware, there is no assurance that fact is true in this case.  It is possible that motivations behind design choices stay unknown until its too late, and that eventuality ruins the spectrometer. As such, a minimally invasive procedure was most important, even at the cost of precision in the correction.
+
+The calibration proceedures and equipment for the spectrometer needed to be inferred and redeveloped. As a consequence, only the most important components were modelled and measured.  In the initial picture of a CAD model shown at top is structure of the spectrometer core and grating mounting structure.  As can be contrasted by the image of the core below, the forward section which collimates the light is completely neglected.
+
+  <!-- Picture exterior with fixture -->
+  <figure>
+    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IMG_1421.JPG" alt="View"/>
+    <figcaption> SPRED spectrometer core and associated 0th order calibration attachment.</figcaption>
+  </figure>
+
+While even after the completion of the calibration, I am still puzzled by certain design choices of the manufacturer. Design choices and measurements are often at whole units, units of 10 or a reasonable fraction (for metric). This makes clear probably 90 percent of distances or clearances, but then there are blind holes, random screws, quirks in the overall structure which can be completely hard to justify. The difference between a important versus unimportant constraint can be difficult.
+
+Using the CAD model developed by over a month's worth of measurement, the recalibration could begin.  Also by knowing the failure mechanism, I could design both the necessary calibration equipment and improvements to mitigate the problem in the future.
 
 <h3>Designing and implementing a system for angluar calibration of a EUV/VUV grating</h3>
+
+The failure in the system became obvious initially, but methods for fixing it took much longer.  The grating sat within a cylinder like apparatus with two posts on either side along the major axis of rotation.  These posts were on bearings which allowed free rotation on that major axis.  The angle was fixed by friction around this small post, with a fork with a central hole allowing only the post through. Tightening a screw which connects the ends of the fork reduces the size of the hole, and puts friction on the post. This friction was insufficient to hold the post over the 20+ years of operation.
+
+Additional methods for fixing the grating's rotation were necessary to prevent the future drift in the angle.  However, due to the lack of knowledge and due to the uniqueness of the parts, it was not feasible to modify the existing pieces without further misalignment of the optics.  Nearby tapped holes had to be used to add additional parts which mated with the grating cylindrical housing which would then better fix the angle.  Two screw holes behind the cylinder (added for some unknown reason) allowed for an additional part to be installed. This part was tangential to the axis of rotation and to the large cylinder face.  A set of screws would then provide friction to the outside of the cylinder and would have a larger torque due to the larger radius at which it was applied.
+
+Other precision parts were made to actually achieve the calibration to desired precision. 
 
   <!-- Simplified problem picture -->
   
@@ -89,8 +108,5 @@ Reverse engineering of products, processes and codes have become more and more c
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/SCJ_2D_He_calib_filtered_20_10_17.png" alt="Full CCD readout of PIXIS-X0 100B in Helium plasma (SCJ)"/>
     <figcaption> Temporary.</figcaption>
   </figure>
-
-
-
 
   <!-- WHAT IS THE ANGLE? -->
