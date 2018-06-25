@@ -8,7 +8,7 @@ description:
 image: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IPPIOT_title.png
 image-sm: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IPPIOT_title.png
 ---
-I wanted to build an Internet of Things (IoT) device and through that I could develop my skills in microcontrollers and design integration.  I also wanted to make it as simple as possible while also being useful and robust. With this in mind I have designed and built a device which connects to the internet, polls a website for a JSON, extracts a specific number (the experimental shot number or air quality index, for example) and displays it via an SPI-connected 8-digit 7-segment display. It feels like the 21st century equivalent of a bed-side clock. This project really highlights the revolution in design allowing for a hobbyist to make complicated products while maintaining low development costs and fast design processes.    
+I wanted to build an Internet of Things (IoT) device while also improving my skills in microcontrollers and in design.  The main goal was to make a simple device while also being both a useful excercise and robust/usable product. With this in mind, I designed and built widget which connects to the internet, polls a website for a JSON, extracts a specific number (for example the experimental shot number or air quality index) and displays it via an SPI-connected 8-digit 7-segment display. The finished product feels like the 21st century equivalent of a bed-side clock, but with much more versatility. This project really highlights the revolution in design allowing for a hobbyist to make complicated products while maintaining a low development cost and a fast design process.    
 
 Doing this required three different segments, designing an integration between pieces
 
@@ -36,7 +36,7 @@ Depending on the settings and optics, it can take high quality 5MP pictures 10 t
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/ESP8266_schematic.png" alt="Electronic schematic of mating board"/>
-    <figcaption>The 7-segment display runs at 5V, with the ESP8266 at 3.3V. The interface board supplies the necessary voltages for these components (with a regulator), and the necessary level shifting for communcation (based off a similar Adafruit dev board). Micro USB was chosen due to the ubiquity of power sources (especially as things switch to USBC).</figcaption>
+    <figcaption>The 7-segment display runs at 5V, with the ESP8266 at 3.3V. The interface board supplies the necessary voltages for these components (with a regulator), and the necessary level shifting for communcation (based off a similar Adafruit dev board). Micro USB was chosen due to the ubiquity of power sources (especially as things switch to USB-C).</figcaption>
   </figure>
 
   <figure>
