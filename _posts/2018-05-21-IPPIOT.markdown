@@ -49,4 +49,9 @@ As it might seem that each problem is distinct and that these challenges are giv
   </figure>
 
 <h3> Writing the microcontroller C code</h3>
+
+When I first conceptualized the necessary components for this project, the implementation of arduino-based ESP8266 control was still in its infancy.  Initally, the wifi would work by connecting to the rather ubiquitous Eduroam network, of which <a href="https://github.com/joostd/esp8266-eduroam">a github user joostd</a> provided the necessary interface.  However, the ESP8266 only functions for the WPA2 PSK version with MSCHAPv2 verification protocol, which my workplace and other locations do not use. In any case, as a way of forcing myself to learn in depth about microcontrollers, I wanted to avoid the simplicity provide by arduino if entirely possible.
+
+An open-source framework built around the Espressif SDK was avaiable by <a href="https://github.com/pfalcon/esp-open-sdk">another github user named pfalcon</a>.  This gave all the necessary components and the guide necessary to compile and flash to the ESP8266 microcontroller. This functionality (luckily) was meant for use on linux machines, making my life easier.
+
 <h3> Putting it all together</h3>
