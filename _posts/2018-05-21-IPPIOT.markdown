@@ -16,7 +16,7 @@ This required solutions for the following challenges:
 
 <ul>
   <li>Proper design tolerancing of parts for print variability and poor electronics workmanship</li>
-  <li>Circuit board design which matches physical and electrical requirements at 3.3 and 5V</li>
+  <li>PCB design which matches physical and electrical requirements at 3.3 and 5V</li>
   <li>Implementing C-based workflow for the available ESP-01 </li>
 </ul>
 
