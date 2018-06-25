@@ -32,6 +32,12 @@ As it might seem that each problem is distinct and that these challenges are giv
 
 <h3> Designing and building an interfacing cicruit board</h3>
 
+
+  <figure>
+    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/ESP8266_schematic.png" alt="Electronic schematic of mating board"/>
+    <figcaption>The 7-segment display runs at 5V, with the ESP8266 at 3.3V. The interface board supplies the necessary voltages for these components (with a regulator), and the necessary level shifting for communcation (based off a similar Adafruit dev board). Micro USB was chosen due to the ubiquity of power sources (especially as things switch to USB-C).</figcaption>
+  </figure>
+
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/g5517.png" alt="PCB CAD for mating board"/>
     <figcaption> Odd trace routing was necessary due to available IO pins on ESP-01. The 5 output pins are designed to match a specific 8 digit 7 segment display with a MAX7221. The hole beside the USB connector allows for a necessary M3 screw needed for mating the 3d printed case (showing how PCB and Case design occurred concurrently). Additional mounting screws and solder holes of Molex connector minimize strain on microUSB solder joint. </figcaption>
@@ -40,11 +46,6 @@ As it might seem that each problem is distinct and that these challenges are giv
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IMG_20180528_144417327.jpg" alt="PCB board progression"/>
     <figcaption>The design utilizes surface mount components to minimize the interface board size. Rather than using a reflow oven, components soldered by hand. This required a larger layout to reduce soldering difficulty.  The boards cheaply manufactured by Seeed Studio, by their printing standards..</figcaption>
-  </figure>
-
-  <figure>
-    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/ESP8266_schematic.png" alt="Electronic schematic of mating board"/>
-    <figcaption>The 7-segment display runs at 5V, with the ESP8266 at 3.3V. The interface board supplies the necessary voltages for these components (with a regulator), and the necessary level shifting for communcation (based off a similar Adafruit dev board). Micro USB was chosen due to the ubiquity of power sources (especially as things switch to USB-C).</figcaption>
   </figure>
 
 <h3> Writing the microcontroller C code</h3>
