@@ -25,23 +25,23 @@ Depending on the settings and optics, it can take high quality 5MP pictures 10 t
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/g5517.png" alt="PCB CAD for mating board"/>
-    <figcaption>The necessary items needed for an example camera system are shown in this photo. From Upper left: custom opto-isolation triggering circuit, camera module, 3D-printed camera mount and lens, ethernet cable, 5V USB-micro cellphone charger, mounting screws, camera cable,  MicroSD card, and Raspberry Pi.</figcaption>
+    <figcaption> Odd trace routing was necessary due to available IO pins on ESP-01. The 5 output pins are designed to match a specific 8 digit 7 segment display with a MAX7221. The hole beside the USB connector allows for a necessary M3 screw needed for mating the 3d printed case (showing how PCB and Case design occurred concurrently). Additional mounting screws and solder holes of Molex connector minimize strain on microUSB solder joint. </figcaption>
   </figure>
 
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IMG_20180528_144417327.jpg" alt="PCB board progression"/>
-    <figcaption>The necessary items needed for an example camera system are shown in this photo. From Upper left: custom opto-isolation triggering circuit, camera module, 3D-printed camera mount and lens, ethernet cable, 5V USB-micro cellphone charger, mounting screws, camera cable,  MicroSD card, and Raspberry Pi.</figcaption>
+    <figcaption>The design utilizes surface mount components to minimize the interface board size. Rather than using a reflow oven, components soldered by hand. This required a larger layout to reduce soldering difficulty.  The boards cheaply manufactured by Seeed Studio, by their printing standards..</figcaption>
   </figure>
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/ESP8266_schematic.png" alt="Electronic schematic of mating board"/>
-    <figcaption>The necessary items needed for an example camera system are shown in this photo. From Upper left: custom opto-isolation triggering circuit, camera module, 3D-printed camera mount and lens, ethernet cable, 5V USB-micro cellphone charger, mounting screws, camera cable,  MicroSD card, and Raspberry Pi.</figcaption>
+    <figcaption>The 7-segment display runs at 5V, with the ESP8266 at 3.3V. The interface board supplies the necessary voltages for these components (with a regulator), and the necessary level shifting for communcation (based off a similar Adafruit dev board). Micro USB was chosen due to the ubiquity of power sources (especially as things switch to USBC).</figcaption>
   </figure>
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/CAD_IPPIOT.jpg" alt="CAD of housing"/>
-    <figcaption>The necessary items needed for an example camera system are shown in this photo. From Upper left: custom opto-isolation triggering circuit, camera module, 3D-printed camera mount and lens, ethernet cable, 5V USB-micro cellphone charger, mounting screws, camera cable,  MicroSD card, and Raspberry Pi.</figcaption>
+    <figcaption>The case was designed to be aestheically pleasing while also easy to be 3d printed. The two parts separate the 7 segment display from the control ESP8266 and interface board. Tolerancing was important for the screen, the micro USB interface, and mating surfaces between the 3d printed parts. </figcaption>
   </figure>
 
 
