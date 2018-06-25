@@ -17,7 +17,7 @@ This required solutions for the following challenges:
 <ul>
   <li>Proper design tolerancing of parts for print variability and poor electronics workmanship</li>
   <li>PCB design which matches physical and electrical requirements at 3.3 and 5V</li>
-  <li>Implementing C-based workflow for the available ESP-01 </li>
+  <li>Using a C-based workflow with the available capabilities of the ESP-01 </li>
 </ul>
 
 As it might seem that each problem is distinct and that these challenges are given cronologically, that was not the case. Each are significantly interrelated, where physical constraints impacted the electronic design which in turn changed the way in which the microcontroller would be programmed. The PCB design and case CAD design did progress before the actual coding, but after the general characteristics of the microcontroller control were defined.
