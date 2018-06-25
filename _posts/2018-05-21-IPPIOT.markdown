@@ -8,26 +8,34 @@ description:
 image: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IPPIOT_title.png
 image-sm: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IPPIOT_title.png
 ---
-I wanted to build an Internet of Things (IoT) device while also improving my skills in microcontrollers and in design.  The main goal was to make a simple device while also being both a useful excercise and robust/usable product. With this in mind, I designed and built widget which connects to the internet, polls a website for a JSON, extracts a specific number (for example the experimental shot number or air quality index) and displays it via an SPI-connected 8-digit 7-segment display. The finished product feels like the 21st century equivalent of a bed-side clock, but with much more versatility. This project really highlights the revolution in design allowing for a hobbyist to make complicated products while maintaining a low development cost and a fast design process.    
+I wanted to build an Internet of Things (IoT) device while also improving my skills in microcontrollers and in design.  The main goal was to make a simple device while also being both a useful excercise and robust/usable product. With this in mind, I designed and built widget which connects to the internet, polls a website for a JSON, extracts a specific number (for example the experimental shot number or air quality index) and displays it via an SPI-connected 8-digit 7-segment display. The finished product feels like the 21st century equivalent of a bed-side clock, but with much more versatility. This project really highlights the revolution in design allowing for a hobbyist to make complicated products while maintaining both a low development cost and a fast design process.    
 
-Doing this required three different segments, designing an integration between pieces
+Doing this required three different segments, designing an integration between the two main electronic components, a housing to mate these components, and code to drive the whole device.  Each piece provided some unique di namely the display and the microcontroller, s pieces
 
-This required the following:
+This required solutions for the following challenges:
 
 <ul>
-  <li>Temp1</li>
-  <li>Temp2</li>
+  <li>Proper design tolerancing of parts for print variability and poor electronics workmanship</li>
+  <li>Circuit board design which matches physical and electrical requirements at 3.3 and 5V</li>
+  <li>Implementing C-based workflow for the available ESP-01 </li>
 </ul>
 
-Temporary
+As it might seem that each problem is distinct and that these challenges are given cronologically, that was not the case. Each are significantly interrelated, where physical constraints impacted the electronic design which in turn changed the way in which the microcontroller would be programmed. The PCB design and case CAD design did progress before the actual coding, but after the general characteristics of the microcontroller control were defined.
 
-Depending on the settings and optics, it can take high quality 5MP pictures 10 times a second all the way to 640x480 resolution at 90 frames per second. The picture and video are from these two ends of this acquisition spectrum. Limitations in the lenses in this case reduce crisp quality of the full images, but are still spactacular in their own way.  In the end, I installed four of these cameras at various locations around the tokamak, each of which yielding a unique perspective on the world of high-temperature plasma physics.
+<h3> 3D printing of a compact housing</h3>
+
+  <figure>
+    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/CAD_IPPIOT.jpg" alt="CAD of housing"/>
+    <figcaption>The case was designed to be aestheically pleasing while also easy to be 3d printed. The two parts separate the 7 segment display from the control ESP8266 and interface board. Tolerancing was important for the screen, the micro USB interface, and mating surfaces between the 3d printed parts. </figcaption>
+  </figure>
+
+
+<h3> Designing and building an interfacing cicruit board</h3>
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/g5517.png" alt="PCB CAD for mating board"/>
     <figcaption> Odd trace routing was necessary due to available IO pins on ESP-01. The 5 output pins are designed to match a specific 8 digit 7 segment display with a MAX7221. The hole beside the USB connector allows for a necessary M3 screw needed for mating the 3d printed case (showing how PCB and Case design occurred concurrently). Additional mounting screws and solder holes of Molex connector minimize strain on microUSB solder joint. </figcaption>
   </figure>
-
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IMG_20180528_144417327.jpg" alt="PCB board progression"/>
@@ -39,15 +47,5 @@ Depending on the settings and optics, it can take high quality 5MP pictures 10 t
     <figcaption>The 7-segment display runs at 5V, with the ESP8266 at 3.3V. The interface board supplies the necessary voltages for these components (with a regulator), and the necessary level shifting for communcation (based off a similar Adafruit dev board). Micro USB was chosen due to the ubiquity of power sources (especially as things switch to USB-C).</figcaption>
   </figure>
 
-  <figure>
-    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/CAD_IPPIOT.jpg" alt="CAD of housing"/>
-    <figcaption>The case was designed to be aestheically pleasing while also easy to be 3d printed. The two parts separate the 7 segment display from the control ESP8266 and interface board. Tolerancing was important for the screen, the micro USB interface, and mating surfaces between the 3d printed parts. </figcaption>
-  </figure>
-
-
-<h3> Designing and building an interfacing cicruit board</h3>
-
-
-<h3> 3D printing of a compact housing</h3>
 <h3> Writing the microcontroller C code</h3>
 <h3> Putting it all together</h3>
