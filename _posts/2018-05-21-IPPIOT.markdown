@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Wi-Fi enabled 7-segment JSON display"
+title: "WiFi enabled 7-segment JSON display"
 date: 2018-05-21
 categories:
   - Side-Projects
