@@ -24,15 +24,27 @@ As it might seem that each problem is distinct and that these challenges are giv
 
 <h3> 3D printing of a compact housing</h3>
 
+One of the great selling points of any 3D printer is the overall accuracy in creating extremely complex components.  However, as with all design and manufacturing, the devil is in the details.  The precision defines the overall ability of the printer to be tolerance, or manage errors in component or errors in how it relates to others. The case had to be taken care for the errors that were likely to exist, namely in mating the components and in integration the various printed circuit boards.  Finally, I also wanted the end result to be rigid, rugged, and to look nice.
+
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/CAD_IPPIOT.jpg" alt="CAD of housing"/>
-    <figcaption>The case was designed to be aestheically pleasing while also easy to be 3d printed. The two parts separate the 7 segment display from the control ESP8266 and interface board. Tolerancing was important for the screen, the micro USB interface, and mating surfaces between the 3d printed parts. </figcaption>
+    <figcaption>The case was designed to be aestheically pleasing while also easy to be 3D printed. The two parts separate the 7 segment display from the control ESP8266 and interface board. Tolerancing was important for the screen, the micro USB interface, and mating surfaces between the 3D printed parts. </figcaption>
   </figure>
+
+The necessary PCBs to be housed within were a 7 segment display, an ESP8266 microcontroller and a board which contains power and communication between these two boards. The .56" 7-segment display and ESP8266 are both cheap and easy to acquire components, approximately $3 each on Amazon respectively. However, the cost and availability come at the cost in their tolerances. This shows readily in the exterior design, which had to take the tolerance issues into account while staying aesthetically pleasing. Fitting both of these requirements took significant time (hands off to product designers, that stuff is not easy).
+
+The display PCB's 8 digits are separated into two 4 segment pieces. These pieces are roughly soldered in, and are often miss-aligned from one another by an angle or offset.  As seen in the CAD drawings 2 of the four screw holes of the display were used to screw the housing together.  The display is attached to the front panel by two screws. The threading holes are not centered within the housing due to the display PCB. The display is offset to one side. For the tolerance problems, the rectangular hole for the display has an additional millimeter gap to account for poor PCB construction.
+
+The other two PCBs are screwed into back half and the two segments are electrically connected by 5 1" wires.  Two screws attach the interface board to the housing, and the interface board has a header to connect the ESP8266.  The surface of the interface board is set so that the Micro USB connector can sit nearly flush with the side of the housing. The two 3D printed pieces make the necessary hole for the USB connector. However, the dimensioning of this hole was made larger than necessary since I didn't trust my ability to surface mount solder accurately. The board screws reduce the strain in solder joint.
+
+The ESP8266 board has a slightly smaller width than the interface board so that it can be recessed farther back in the housing. While this made sense from a mechanical design prospective, updating the flash on the microcontroller requires removing 4 of the 6 screws. This makes changing the WiFi network a pain and is definitely something I would do differently if I were to redesign it. The design also has a significantly large, useless void on the opposite side of the two boards which could be replaced by a battery in a future iteration.
+
+The very thick nature of the device is really a product of the interfaces between the PCBs.  In one case, it needed to be wired, and the other with the use of a header.  Headers are inherently very large and contributed greatly to the overall size.  I now understand why there is such focus on single board phones and computers, and speciality connectors for components, as these greatly impact the thickness of the device. In this case, the overall size and weight make it much more of a small desk piece, rather than something for a pocket.
 
 
 <h3> Designing and building an interfacing cicruit board</h3>
 
-
+The interfacing board is 
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/ESP8266_schematic.png" alt="Electronic schematic of mating board"/>
@@ -41,7 +53,7 @@ As it might seem that each problem is distinct and that these challenges are giv
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/g5517.png" alt="PCB CAD for mating board"/>
-    <figcaption> Odd trace routing was necessary due to available IO pins on ESP-01. The 5 output pins are designed to match a specific 8 digit 7 segment display with a MAX7221. The hole beside the USB connector allows for a necessary M3 screw needed for mating the 3d printed case (showing how PCB and Case design occurred concurrently). Additional mounting screws and solder holes of Molex connector minimize strain on microUSB solder joint. </figcaption>
+    <figcaption> Odd trace routing was necessary due to available IO pins on ESP-01. The 5 output pins are designed to match a specific 8 digit 7 segment display with a MAX7221. The hole beside the USB connector allows for a necessary M3 screw needed for mating the 3D printed case (showing how PCB and Case design occurred concurrently). Additional mounting screws and solder holes of Molex connector minimize strain on microUSB solder joint. </figcaption>
   </figure>
 
   <figure>
