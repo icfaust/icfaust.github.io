@@ -41,6 +41,8 @@ The ESP8266 board has a slightly smaller width than the interface board so that 
 
 The very thick nature of the device is really a product of the interfaces between the PCBs.  In one case, it needed to be wired, and the other with the use of a header.  Headers are inherently very large and contributed greatly to the overall size.  I now understand why there is such focus on single board phones and computers, and speciality connectors for components, as these greatly impact the thickness of the device. In this case, the overall size and weight make it much more of a small desk piece, rather than something for a pocket.
 
+The housing pieces were first printed in sintered nylon and later versions in resin. I was used to PLA printers from other 3D printing projects, but I wanted to learn more about the accuracy, precision, and requirements of these other styles.  The nylon tends to accrue dirt easily due to the surface finish (as can be seen in some photos) and is a bit expensive. The resin is very high quality in precision, and while my printing service significantly scuffed the exterior, the surface is still very smooth (better than PLA and nylon). However, it is much more rigid and I think tapping the holes is necessary in resin rather than forcing in the M3 screws (which I do often in PLA and nylon). The error in these prints were less than .25mm, meaning that mating surfaces should be toleranced with .5mm so not too much play is allowed.  Both nylon and Resin allow for very small features which is knowledge I will certainly use in the future.
+
 
 <h3> Designing and building an interfacing cicruit board</h3>
 
