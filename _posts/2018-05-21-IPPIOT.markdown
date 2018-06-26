@@ -93,7 +93,7 @@ Finally, I must say that this project really does hinge on the work of <a href="
 
 <h3> Putting it all together</h3>
 
-The devices require the hard-coding of a website which yields a JSON with a known parameter, and a standard WPA wifi network in which to connect.  After compiling and flashing, the device is reassembled and ready to go.  The display is virtually limitless in the data it can display, as lots of interesting data can now be accessed via various web APIs.  The initial examples are measurements of the Air Quality Index, and following <a href="http://www.dweet.io"/>dweet.io</a>. Other things, such as temperature, UV index, stock tickers or subway times could also be used. Its just a matter of understanding the web API and the output JSON. 
+The devices require the hard-coding of a website which yields a JSON with a known parameter, and a standard WPA wifi network in which to connect.  After compiling and flashing, the device is reassembled and ready to go.  The display is virtually limitless in the data it can display, as lots of interesting data can now be accessed via various web APIs.  The initial examples are measurements of the Air Quality Index, and following <a href="http://www.dweet.io">dweet.io</a>. Other things, such as temperature, UV index, stock tickers or subway times could also be used. Its just a matter of understanding the web API and the output JSON. 
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IPPIOT_stack.png" alt="Finished IPPIOT devices"/>
