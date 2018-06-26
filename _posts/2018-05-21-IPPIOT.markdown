@@ -100,4 +100,4 @@ The devices require the hard-coding of a website which yields a JSON with a know
     <figcaption>Here are three completed devices, two of which are used to display the Shanghai AQI via a JSON.  The bottom (white) is used for monitoring the operational cycle of the ASDEX-Upgrade CSXR diagnostic</figcaption>
   </figure>
 
-The data for this project can be found <a href="https://github.com/icfaust/IPPIoT">on my github</a>, under three separate directories for the various components.  A part list describes what I used initially to build the device. If you have any questions, please do not hesitate!
+The data for this project can be found <a href="https://github.com/icfaust/IPPIoT">on my github</a>, under three separate directories for the various components.  A part list describes what I used initially to build the device. If you have any questions, please don't hesitate to email me.
