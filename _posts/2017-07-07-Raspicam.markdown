@@ -100,4 +100,4 @@ Conversion from video to the intensity data is not as straightforward as would b
 
 In the example figure, the various channels of color and luminance are shown for another C-Mod camera image.  As human sight is more keyed on intensity (more rods than cones in the eye), coorespondingly the resolution of the color channel images are noticibly worse than the black-white image.  Ths sparkling observed are from small pieces of Calcium Floride going into the plasma.  The lack of variation in the other channels shows that the intensity data is most interesting for analysis.
 
-The codes are available upon request, just shoot me an email!
+The codes are available <a href="https://github.com/icfaust/Misc/tree/master/Raspicam">on my GitHub</a>, just shoot me an email about any questions!
