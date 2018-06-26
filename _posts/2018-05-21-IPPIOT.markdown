@@ -66,7 +66,7 @@ The 7 segment display utilizes an <a href="https://en.wikipedia.org/wiki/Serial_
 
 Soldering surface mount components with a typical soldering iron takes practice and dexterity. Assembling each board does take significant time, but there are great guides online to doing it this way.  The key is to only solder one pad, attach the surface component in the right position with that pad, and then solder the other pad to finish.  This makes it flat and in the right orientation with a strong connection.  I purposefully chose larger elements to simplify my soldering.  It was also likely a larger board than necessary to also simplify assembly.
 
-Designing circuit boards cheaply require that they be 1) small 2) two layers and 3) of standard thickness.  It also helps that free PCB CAD softwares often have size limitations.  Due to the small nature of this project by size, this worked quite well to keep the price down. A lot of cheap houses are in China, and have month long turn around times, which was perfectly acceptable in this case.
+Designing circuit boards cheaply require that they be 1) small 2) two layers and 3) of standard thickness.  It also helps that free PCB CAD softwares often have size limitations.  Due to the small nature of this project by size, this worked quite well to keep the price down. A lot of cheap houses are in China and have month long turn around times which was perfectly acceptable in this case.
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IMG_20180528_144417327.jpg" alt="PCB board progression"/>
