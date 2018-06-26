@@ -41,27 +41,39 @@ The ESP8266 board has a slightly smaller width than the interface board so that 
 
 The very thick nature of the device is really a product of the interfaces between the PCBs.  In one case, it needed to be wired, and the other with the use of a header.  Headers are inherently very large and contributed greatly to the overall size.  I now understand why there is such focus on single board phones and computers, and speciality connectors for components, as these greatly impact the thickness of the device. In this case, the overall size and weight make it much more of a small desk piece, rather than something for a pocket.
 
-The housing pieces were first printed in sintered nylon and later versions in resin. I was used to PLA printers from other 3D printing projects, but I wanted to learn more about the accuracy, precision, and requirements of these other styles.  The nylon tends to accrue dirt easily due to the surface finish (as can be seen in some photos) and is a bit expensive. The resin is very high quality in precision, and while my printing service significantly scuffed the exterior, the surface is still very smooth (better than PLA and nylon). However, it is much more rigid and I think tapping the holes is necessary in resin rather than forcing in the M3 screws (which I do often in PLA and nylon). The error in these prints were less than .25mm, meaning that mating surfaces should be toleranced with .5mm so not too much play is allowed.  Both nylon and Resin allow for very small features which is knowledge I will certainly use in the future.
+The housing pieces were first printed in sintered nylon and later versions in resin. I was used to PLA printers from other 3D printing projects, but I wanted to learn more about the accuracy, precision, and requirements of these other styles.  The nylon tends to accrue dirt easily due to the surface finish (as can be seen in some photos) and is a bit expensive. The resin is very high quality in precision, and while my printing service significantly scuffed the exterior, the surface is still very smooth (better than PLA and nylon). However, it is much more rigid and I think tapping the holes is necessary in resin rather than forcing in the M3 screws (which I do often in PLA and nylon). The error in these prints were less than .25mm, meaning that mating surfaces should be toleranced with .5mm so not too much play is allowed.  Both nylon and resin allow for very small features which is knowledge I will certainly use in the future.
 
 
 <h3> Designing and building an interfacing cicruit board</h3>
 
-The interfacing board is 
+The interfacing board was truly the hardest part of the entire process. It is what links the programming to the physical design, bring all of the various design pieces together.  It contains constraints from the mechanical design (such as the additional through hole), to the programming (3 IO outputs), to the electronic (the necessary 5V 3.3V level shifting). It was also my first personal attempt at ordering and negotiating the a PCB print house, which was previously done by my coworkers in the lab. I will admit, there were faults in the development process that I know now how not to repeat.
+
+When developing the schematic, in the future I should do it concurrently with shopping for circuit elements.  For example, the micro USB connector was very expensive, as the available pad in EAGLE was meant only for Molex connectors.  Other, different layouts would have saved money and simplified ordering.  Also, unbeknownst to me at the time, but ordering speciality circuit components, especially surface mount components, are very difficult in Germany due to tax laws. Many of the typically large electronic sellers will simply not sell to individuals. This really drives up cost, and stifles hobby innovation.  To be frank, I was appalled. I think it is probably a signal that I need to be a part of a hackerspace or community lab.
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/ESP8266_schematic.png" alt="Electronic schematic of mating board"/>
     <figcaption>The 7-segment display runs at 5V, with the ESP8266 at 3.3V. The interface board supplies the necessary voltages for these components (with a regulator), and the necessary level shifting for communcation (based off a similar Adafruit dev board). Micro USB was chosen due to the ubiquity of power sources (especially as things switch to USB-C).</figcaption>
   </figure>
 
+The greatest concern early on was figuring the power and voltage requirements of the circuit.  The ESP8266 uses 3.3V logic and will become damaged with 5V input. On the other hand, the display uses 5V.  I decided due to simplicity to base the whole device around micro USB due to the availability of chargers.  This also required the use of a regulator and three <a href="https://en.wikipedia.org/wiki/Level_shifter">level shifters</a>.  I simply relied on an <a href="https://www.adafruit.com/product/757">Adafruit breakout board</a> to design my own.
+
+The 7 segment display utilizes an <a href="https://en.wikipedia.org/wiki/Serial_Peripheral_Interface">SPI</a> interface, and does not have a MISO line.  This means 3 output pins talk from the ESP8266 to the MAX7221, and the remaining two providing power and ground.  The power can be directly linked from the USB to the display, and almost all other circuit components are used to isolate/translate the 3.3V functionality of the ESP8266.
+
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/g5517.png" alt="PCB CAD for mating board"/>
     <figcaption> Odd trace routing was necessary due to available IO pins on ESP-01. The 5 output pins are designed to match a specific 8 digit 7 segment display with a MAX7221. The hole beside the USB connector allows for a necessary M3 screw needed for mating the 3D printed case (showing how PCB and Case design occurred concurrently). Additional mounting screws and solder holes of Molex connector minimize strain on microUSB solder joint. </figcaption>
   </figure>
 
+Soldering surface mount components with a typical soldering iron takes practice and dexterity. Assembling each board does take significant time, but there are great guides online to doing it this way.  The key is to only solder one pad, attach the surface component in the right position with that pad, and then solder the other pad to finish.  This makes it flat and in the right orientation with a strong connection.  I purposefully chose larger elements to simplify my soldering.  It was also likely a larger board than necessary to also simplify assembly.
+
+Designing circuit boards cheaply require that they be 1) small 2) two layers and 3) of standard thickness.  It also helps that free PCB CAD softwares often have size limitations.  Due to the small nature of this project by size, this worked quite well to keep the price down. A lot of cheap houses are in China, and have month long turn around times, which was perfectly acceptable in this case.
+
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IMG_20180528_144417327.jpg" alt="PCB board progression"/>
-    <figcaption>The design utilizes surface mount components to minimize the interface board size. Rather than using a reflow oven, components soldered by hand. This required a larger layout to reduce soldering difficulty.  The boards cheaply manufactured by Seeed Studio, by their printing standards..</figcaption>
+    <figcaption>The design utilizes surface mount components to minimize the interface board size. Rather than using a reflow oven, components soldered by hand. This required a larger layout to reduce soldering difficulty.  The boards cheaply manufactured by Seeed Studio, by their printing standards.</figcaption>
   </figure>
+
+Since I could only roughly estimate the necessary current needed to operate the device, and with an aversion to capactive coupling, I designed the traces to be wide and widely separated. The slow communication speed I utilizes (~1 kHz) was more than enough for this application.  The overall current draw was lower than I expected (nothing gets hot), so it is way overbuilt.  Future iterations would not need as powerful a regulator, and the board itself could probably be reduced in size.
 
 <h3> Writing the microcontroller C code</h3>
 
