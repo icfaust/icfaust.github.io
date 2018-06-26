@@ -92,3 +92,8 @@ That being said, some of the pre-compiled SDK libraries do not use follow this c
 Finally, I must say that this project really does hinge on the work of <a href="https://github.com/Caerbannog/esphttpclient">GitHub user Caerbannog</a>, who did all of the legwork of writing an HTTP GET and HTTP POST code for the Espressif SDK.  While initially I thought this portion of the code would take significant time to debug and validate, it took only a single example to get up to speed. Some modifications were needed for this project and it is given in the code section of the GitHub repository.
 
 <h3> Putting it all together</h3>
+
+  <figure>
+    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IPPIOT_stack.png" alt="Finished IPPIOT devices"/>
+    <figcaption>Here are three completed devices, two of which are used to display the Shanghai AQI via a JSON.  The bottom (white) is used for monitoring the operational cycle of the ASDEX-Upgrade CSXR diagnostic</figcaption>
+  </figure>
