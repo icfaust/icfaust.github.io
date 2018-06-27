@@ -67,7 +67,7 @@ Other precision parts were made to actually achieve the calibration to desired p
   <!-- Picture exterior with fixture -->
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/out_450.jpg" alt="View"/>
-    <figcaption> The initial camera focus was calibrated using a Red LED. The position of the camera (rather than the grating) was moved into focus. A secondary focus calibration was later done with a Helium capacitive plasma source. </figcaption>
+    <figcaption> The initial camera focus was calibrated using a Red LED. The position of the camera (rather than the grating) was moved into focus. A secondary focus calibration was later done with a Helium capacitive plasma source. This image was acquired from a bare Raspberry Pi CCD (without a lens) which mimicked the UV sensor.</figcaption>
   </figure>
 
   
