@@ -67,14 +67,14 @@ Other precision parts were made to actually achieve the calibration to desired p
   <!-- Picture exterior with fixture -->
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/out_450.jpg" alt="View"/>
-    <figcaption> Temporary.</figcaption>
+    <figcaption> The initial camera focus was calibrated using a Red LED. The position of the camera (rather than the grating) was moved into focus. A secondary focus calibration was later done with a Helium capacitive plasma source. </figcaption>
   </figure>
 
   
   <!-- Fully installed picture yep -->
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IMG_20171023_180054.jpg" alt="Not Sure"/>
-    <figcaption> Temporary.</figcaption>
+    <figcaption> 3D printed LED mount.  It attaches to the exterior of the vacuum vessel, and is adjusted to set just in front of the entrance aperture. A similar system was set up for the inital laser calibration.</figcaption>
   </figure>
 
   
