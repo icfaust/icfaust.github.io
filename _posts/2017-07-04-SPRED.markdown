@@ -19,7 +19,7 @@ This project in total was a tough problem as it had the following large issues: 
 <ul>
   <li>Analysis of previous operation</li>
   <li>Reverse engineering the spectrometer with minimal disassembly</li>
-  <li>Designing and implementing a system for angluar calibration of a EUV/VUV grating</li>
+  <li>Designing and implementing a system for angular calibration of a EUV/VUV grating</li>
   <li>Designing and building fixtures for in-place verification</li>
   <li>Analysis of spectrometer operation</li>
 </ul>
@@ -48,7 +48,7 @@ While even after the completion of the calibration, I am still puzzled by certai
 
 Using the CAD model developed by over a month's worth of measurement, the recalibration could begin.  Also by knowing the failure mechanism, I could design both the necessary calibration equipment and improvements to mitigate the problem in the future.
 
-<h3>Designing and implementing a system for angluar calibration of a EUV/VUV grating</h3>
+<h3>Designing and implementing a system for angular calibration of a EUV/VUV grating</h3>
 
 The failure in the system became obvious initially, but methods for fixing it took much longer to develop.  The grating sat within a cylindrical mount with two posts on either side along the major axis of symmetry.  These posts had associated bearings which allowed free rotation on that major axis.  The angle was fixed by friction around this small post, with a fork with a central hole allowing only the post through. Tightening a screw which connects the ends of the fork reduces the size of the hole, and puts friction on the post. This friction was insufficient to hold the post over the 20+ years of operation.
 
@@ -59,8 +59,11 @@ The failure in the system became obvious initially, but methods for fixing it to
     <figcaption> The old (left) and new (right) gratings had noticeable differences. A new hold-down structure had to be built to precisely fix the grating, which was an unexpected problem. The coloring difference between the two gratings is unknown (though the right grating is known to be gold).  </figcaption>
   </figure>
 
-  Additional methods for fixing the grating's rotation were necessary to prevent the future drift in the angle.  However, due to the lack of knowledge and due to the uniqueness of the parts, it was not feasible to modify the existing pieces without further misaligning the optics.  Nearby tapped holes had to be used to add additional parts which mated with the grating cylindrical housing which would then better fix the angle.  Two screw holes behind the cylinder (added for some unknown reason) allowed for an additional part to be installed. This part was tangential to the axis of rotation and to the large cylinder face.  A set of screws would then provide friction to the outside of the cylinder and would have a larger torque due to the larger radius at which it was applied.
- 
+  Additional methods for fixing the grating's rotation were necessary to prevent the future drift in the angle.  However, due to the lack of knowledge and due to the uniqueness of the parts, it was not feasible to modify the existing pieces without further misaligning the optics.  Nearby tapped holes had to be used to add additional parts which mated with the grating cylindrical housing which would then better fix the angle.  Two screw holes behind the cylinder (added for some unknown reason) allowed for an additional part to be installed. This part was tangential to the axis of rotation and to the large cylinder face.  A set of screws would then provide friction to the outside of the cylinder and would have a larger torque due to the larger radius at which it was applied. These features can be seen in the figure above to the right of the grating.
+
+Other pieces were also developed for the angular calibration itself.  A long lever arm was attached to the central axis, with a micrometer scew set perpendicularly at the end.  The lever arm makes the subtle movements in the micrometer translate to changes in angle (through the tangent). The longer the lever arm, the more precision in the angle.  However, that only allows for the precise adjustment of the angle, and does not accurately determine the angle on its own.
+
+A laser system was set onto an optical rail with the spectrometer core (as seen in an above photo).  Using a precise inclinometer (accurate to .002 degrees), the angle of the laser and the spectrometer core were determined. At a precisely known distance away the laser was passed through the pinhole, reflected off the grating and projected onto the wall.  The wall was sufficiently far away to make the triangle set by thereflected light, the initial laser angle and the wall over a meter on each edge.  These long distance, just like the micrometer adjustment, made for a precise measurement of the angle.  By using the precise measurement and adjustment, it was possible to increase the accuracy of the angle measurement significantly.  Initial estimates using experimental data found that the angle of the SMF grating was properly set to within .2 degrees.
 
   <!-- Simplified problem picture -->
   
@@ -70,18 +73,25 @@ The failure in the system became obvious initially, but methods for fixing it to
   
 <h3>Fixtures for in-place verification</h3>
 
-  <!-- Picture exterior with fixture -->
-  <figure>
-    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/out_450.jpg" alt="View"/>
-    <figcaption> The initial camera focus was calibrated using a Red LED. The position of the camera (rather than the grating) was moved into focus. A secondary focus calibration was later done with a Helium capacitive plasma source. This image was acquired from a bare Raspberry Pi CCD (without a lens) which mimicked the UV sensor.</figcaption>
-  </figure>
+After the precise calibration, it was unknown what was necessary to preserve the alignment.  Again, a conservative course of action was taken.  Two shrouds were 3D printed which went over the entire grating holder to prevent bumps and accidents from causing any changes. However, that is not sufficient to guarantee proper operation after reinstallation in the vacuum vessel.  A secondary system needed to be developed to ste the cameras to the proper focus and wavelengths.  This is backwards from visible camera systems, where the optics themselves are often adjusted to improve image quality.
 
+As can be seen in the above figure, there was simply not enough room to put in an optical rail or any other device with enough accuracy for the focus and wavelenth adjustments. However, there existed two screw holes at the end of the spectrometer core which are used to hold the differential pumping section. This was near the main conflat flange at the front of the spectrometer, opening widely to the outside world.  Thismounting point was repurposed fix a laser and LED holder for the initial camera wavelength and focus calibration. Using 3D printed parts and precision optical adjustment tables, the light source position could be adjusted and fixed as necessary to the front of the aperture.
   
   <!-- Fully installed picture yep -->
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IMG_20171023_180054.jpg" alt="Not Sure"/>
     <figcaption> 3D printed LED mount.  It attaches to the exterior of the vacuum vessel, and is adjusted to set just in front of the entrance aperture. A similar system was set up for the inital laser calibration.</figcaption>
   </figure>
+
+On the other end, the focus and wavelength (essentially the position).
+
+  <!-- Picture exterior with fixture -->
+  <figure>
+    <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/out_450.jpg" alt="View"/>
+    <figcaption> The initial camera focus was calibrated using a Red LED. The position of the camera (rather than the grating) was moved into focus. A secondary focus calibration was later done with a Helium capacitive plasma source. This image was acquired from a bare Raspberry Pi CCD (without a lens) which mimicked the UV sensor.</figcaption>
+  </figure>
+
+
 
 
   <!-- Fully installed picture yep -->
