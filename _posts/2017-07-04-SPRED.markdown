@@ -81,14 +81,14 @@ Other precision parts were made to actually achieve the calibration to desired p
   <!-- Fully installed picture yep -->
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/SPRED_gratings_comparison.jpg" alt="Not Sure"/>
-    <figcaption> Temporary.</figcaption>
+    <figcaption> The old (left) and new (right) gratings had noticeable differences. A new hold-down structure had to be built to precisely fix the grating, which was an unexpected problem. The coloring difference between the two gratings is unknown (though the right grating is known to be gold).  </figcaption>
   </figure>
 
   
   <!-- Fully installed picture yep -->
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/SPRED_gratings.JPG" alt="Not Sure"/>
-    <figcaption> Temporary.</figcaption>
+    <figcaption> The SPRED gratings re-installed into the vacuum vessel. Suprisingly, we were able to put it within .5mm from the previous position (verified using a FARO arm). The tight space necessitated the removal of the spectrometer core for initial calibration.</figcaption>
   </figure>
 
 
@@ -98,7 +98,7 @@ Other precision parts were made to actually achieve the calibration to desired p
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/SCJ_1D_He_calib_filtered_20_10_17.png" alt="Binned CCD readout of PIXIS-X0 100B in Helium plasma (SCJ)"/>
-    <figcaption> Temporary.</figcaption>
+    <figcaption> The raw spectra of a Helium measures two prominent Helium lines, 30.4 nm and 58.5nm. The spectra shows that the recalibration meets the expected goals: the correct spectral range with good focus. </figcaption>
   </figure>
 
 
@@ -106,7 +106,7 @@ Other precision parts were made to actually achieve the calibration to desired p
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/SCJ_2D_He_calib_filtered_20_10_17.png" alt="Full CCD readout of PIXIS-X0 100B in Helium plasma (SCJ)"/>
-    <figcaption> Temporary.</figcaption>
+    <figcaption> Image output of the SCJ spectrometer when viewing a Helium test plasma. 2D images take longer to store, and are only used for calibrations. The rotation of the visible lines impacts the resolution, as the 2D pixel array is binned to 1D in typical operation.</figcaption>
   </figure>
 
   <!-- WHAT IS THE ANGLE? -->
