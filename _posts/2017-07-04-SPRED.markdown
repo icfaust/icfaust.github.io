@@ -83,7 +83,7 @@ As can be seen in the above figure, there was simply not enough room to put in a
     <figcaption> 3D printed LED mount.  It attaches to the exterior of the vacuum vessel, and is adjusted to set just in front of the entrance aperture. A similar system was set up for the inital laser calibration.</figcaption>
   </figure>
 
-On the other end, the focus and wavelength (essentially the position).
+The light from the the LED and laser, after passing through the aperture and reflecting off the grating are sent to the image plane of the detector. On this end, another fixture was designed and built to use the light and set the focus and wavelength (essentially the position) of the camera. As with the laser/LED mount, the secondary fixture was attached to the exterior vacuum vessel.  It also used precise optical tables to adjust a CCD.  The CCD was used to find the 0th order focus position with proper offsets such that the wavelengths of interest could properly imaged by the UV camera.  
 
   <!-- Picture exterior with fixture -->
   <figure>
@@ -91,17 +91,20 @@ On the other end, the focus and wavelength (essentially the position).
     <figcaption> The initial camera focus was calibrated using a Red LED. The position of the camera (rather than the grating) was moved into focus. A secondary focus calibration was later done with a Helium capacitive plasma source. This image was acquired from a bare Raspberry Pi CCD (without a lens) which mimicked the UV sensor.</figcaption>
   </figure>
 
-
-
+An example of the focus calibration using the 0th order (visible red light in this case) is shown above.  The CCD used was a regular Raspberry Pi camera with the lens removed.  This exposed CCD was simple and straightforward to interface with. Its small size and simple mounting made designing fixtures also relatively simple.  The small pixel size (on the order of micrometers) also made precise adjustment of the camera position identifiable and reproducable.
 
   <!-- Fully installed picture yep -->
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/SPRED_gratings.JPG" alt="Not Sure"/>
-    <figcaption> The SPRED gratings re-installed into the vacuum vessel. Suprisingly, we were able to put it within .5mm from the previous position (verified using a FARO arm). The tight space necessitated the removal of the spectrometer core for initial calibration.</figcaption>
+    <figcaption> The SPRED gratings re-installed into the vacuum vessel. Suprisingly, we were able to put it within .5mm from the previous position (verified using a <a href="https://www.faro.com/">FARO arm</a>). The tight space necessitated the removal of the spectrometer core for initial calibration.</figcaption>
   </figure>
 
+Another success was the return of the core of the spectrometer to its initial position. This position is very important as the location of the imaging planes are directly related to the mounted position of the spectrometer core.  If this were not properly set, it could cause the focus to vary across the CCD. Having successfully reproduced the previous setting it was assured that alignment of the new Princeton Instruments cameras could proceed.
 
 <h3>Analysis of spectrometer operation</h3>
+
+
+Unfortunately, focusing the 0th order (regularly reflected light) did not make the 1st order scattered light in focus.  A secondary calbiration was necessary to fully focus the camera. 
 
   <!-- Spectra Image (binned) yep -->
 
