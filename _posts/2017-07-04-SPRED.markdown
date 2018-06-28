@@ -75,7 +75,7 @@ A laser system was set onto an optical rail with the spectrometer core (as seen 
 
 After the precise calibration, it was unknown what was necessary to preserve the alignment.  Again, a conservative course of action was taken.  Two shrouds were 3D printed which went over the entire grating holder to prevent bumps and accidents from causing any changes. However, that is not sufficient to guarantee proper operation after reinstallation in the vacuum vessel.  A secondary system needed to be developed to ste the cameras to the proper focus and wavelengths.  This is backwards from visible camera systems, where the optics themselves are often adjusted to improve image quality.
 
-As can be seen in the above figure, there was simply not enough room to put in an optical rail or any other device with enough accuracy for the focus and wavelenth adjustments. However, there existed two screw holes at the end of the spectrometer core which are used to hold the differential pumping section. This was near the main conflat flange at the front of the spectrometer, opening widely to the outside world.  This mounting point was repurposed fix a laser and LED holder for the initial camera wavelength and focus calibration. Using 3D printed parts and precision optical adjustment tables, the light source position could be adjusted and fixed as necessary to the front of the aperture.
+As can be seen in the above figure, there was simply not enough room to put in an optical rail or any other device with enough accuracy for the focus and wavelenth adjustments. However, there existed two screw holes at the end of the spectrometer core which are used to hold the differential pumping section. This was near the main conflat flange at the front of the spectrometer, opening widely to the outside world.  This mounting point was repurposed to hold a laser or LED for the initial camera wavelength and focus calibration. Using 3D printed parts and precision optical adjustment tables, the light source position could be adjusted and fixed as necessary to the front of the aperture.
   
   <!-- Fully installed picture yep -->
   <figure>
@@ -83,15 +83,14 @@ As can be seen in the above figure, there was simply not enough room to put in a
     <figcaption> 3D printed LED mount.  It attaches to the exterior of the vacuum vessel, and is adjusted to set just in front of the entrance aperture. A similar system was set up for the inital laser calibration.</figcaption>
   </figure>
 
-The light from the the LED and laser, after passing through the aperture and reflecting off the grating are sent to the image plane of the detector. On this end, another fixture was designed and built to use the light and set the focus and wavelength (essentially the position) of the camera. As with the laser/LED mount, the secondary fixture was attached to the exterior vacuum vessel.  It also used precise optical tables to adjust a CCD.  The CCD was used to find the 0th order focus position with proper offsets such that the wavelengths of interest could properly imaged by the UV camera.  
-
+The light from the the LED and laser, after passing through the aperture and reflecting off the grating, are sent to the image plane of the detector. On this end another fixture was built to set the focus and wavelength (essentially the position) of the camera. As with the laser/LED mount, the secondary fixture was attached to the exterior vacuum vessel.  It also used precise optical tables to adjust a CCD.  The CCD was used to find the 0th order focus position with proper offsets such that the wavelengths of interest could properly imaged by the UV camera.  
   <!-- Picture exterior with fixture -->
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/out_450.jpg" alt="View"/>
     <figcaption> The initial camera focus was calibrated using a Red LED. The position of the camera (rather than the grating) was moved into focus. A secondary focus calibration was later done with a Helium capacitive plasma source. This image was acquired from a bare Raspberry Pi CCD (without a lens) which mimicked the UV sensor.</figcaption>
   </figure>
 
-An example of the focus calibration using the 0th order (visible red light in this case) is shown above.  The CCD used was a regular Raspberry Pi camera with the lens removed.  This exposed CCD was simple and straightforward to interface with. Its small size and simple mounting made designing fixtures also relatively simple.  The small pixel size (on the order of micrometers) also made precise adjustment of the camera position identifiable and reproducable.
+An example of the focus calibration using the 0th order (visible red light in this case) is shown above.  The CCD used was a regular Raspberry Pi camera with the lens removed.  The exposed CCD could measure and set the position with great accuracy without too much effort. Its small size and simple mounting made designing fixtures also relatively simple. The acquisition and visualization of the CCD output comes standard in the Raspberry Pi operating system. Finally, the small pixel size (on the order of micrometers) also made precise adjustment of the camera position identifiable and reproducable.
 
   <!-- Fully installed picture yep -->
   <figure>
@@ -99,12 +98,11 @@ An example of the focus calibration using the 0th order (visible red light in th
     <figcaption> The SPRED gratings re-installed into the vacuum vessel. Suprisingly, we were able to put it within .5mm from the previous position (verified using a <a href="https://www.faro.com/">FARO arm</a>). The tight space necessitated the removal of the spectrometer core for initial calibration.</figcaption>
   </figure>
 
-Another success was the return of the core of the spectrometer to its initial position. This position is very important as the location of the imaging planes are directly related to the mounted position of the spectrometer core.  If this were not properly set, it could cause the focus to vary across the CCD. Having successfully reproduced the previous setting it was assured that alignment of the new Princeton Instruments cameras could proceed.
+However, before this calibration system could be used, the core of the spectrometer had to be returned to its initial position. This position is very important as the location of the imaging planes are directly related to the mounted position of the spectrometer core.  If this were not properly set, it could cause the focus to vary across the CCD. After having successfully reproduced the previous position within a .5mm it was assured that alignment of the new Princeton Instruments cameras could proceed.
 
 <h3>Analysis of spectrometer operation</h3>
 
-
-Unfortunately, focusing the 0th order (regularly reflected light) did not make the 1st order scattered light in focus.  A secondary calbiration was necessary to fully focus the camera. 
+The two <a href="https://www.princetoninstruments.com/">Princeton Instruments X-100B</a> cameras were installed and the whole vacuum system was systematically reassembled.  Unfortunately, the previous focusing the 0th order (regularly reflected light) using red light did not guarantee that the 1st order scattered light in focus.  A secondary calbiration was necessary to fully focus the camera. For EUV and VUV spectrometers it is important to have and EUV/VUV light source for calibrations.
 
   <!-- Spectra Image (binned) yep -->
 
@@ -113,6 +111,7 @@ Unfortunately, focusing the 0th order (regularly reflected light) did not make t
     <figcaption> The raw spectra of a Helium observes two prominent Helium lines, 30.4 nm and 58.5nm. The spectra shows that the recalibration meets the expected goal: the expected spectral range with good focus. </figcaption>
   </figure>
 
+The available light source at ASDEX-Upgrade is a Helium plasma which creates several strong and easily identifiable emission lines at specfic wavelengths.  In the UV, these were used to find the wavelength of the spectrometers, and set the proper focus (by minimizing the width of the line).  
 
   <!-- Spectra Image (full) yep -->
 
@@ -120,5 +119,12 @@ Unfortunately, focusing the 0th order (regularly reflected light) did not make t
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/SCJ_2D_He_calib_filtered_20_10_17.png" alt="Full CCD readout of PIXIS-X0 100B in Helium plasma (SCJ)"/>
     <figcaption> Image output of the SCJ spectrometer when viewing a Helium test plasma. 2D images take longer to store, and are only used for calibrations. The rotation of the visible lines impacts the resolution, as the 2D pixel array is binned to 1D in typical operation.</figcaption>
   </figure>
+
+The CCD sensor of the spectrometer is a 2d array which is summed in one direction to make a 1d spectrum.  The width of the line is also dependent on the alligment of the line across the surface, and the binning direction of the CCD.  When they are misaligned, the intense peak in the spectrum can be blurred to neighboring bins.  As such, the proper rotation of the camera must also be found.  As shown in the figure above, the camera was rotated to best align these two.
+
+<h3> Conclusions </h3>
+
+With all of this work, the spectrometer (with the two gratings and two cameras) was returned to service.  Reverse engineering often requires conservative planning often with significant engineering on its own.  With a slow and careful approach it is possible to fix most things, however it is truly a question of time and effort. With this, I definitely have an appreciation for both engineering design and the process by which firms try to reverse engineering it.
+
 
   <!-- WHAT IS THE ANGLE? -->
