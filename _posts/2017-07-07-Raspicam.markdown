@@ -8,7 +8,7 @@ description:
 image: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/1160902011-frames-21.jpg
 image-sm: https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/1160902011-frames-21.jpg
 ---
-I designed and built equipment necessesary for Raspberry Pi Cameras to operate in the difficult environment of tokamaks. These cameras faced high magnetic fields, intense radiation bombardment, and substantial heat excursions. These simple and low-cost systems were able to outperform similar older systems at a dramatically reduced price with simpler implementation.  While the operation of the Raspberry Pi camera is well-documented and straight-forward, this new equipment interfaced with the computer, electrical and mechanical systems of the Alcator C-Mod tokamak.
+I designed and built equipment necessary for Raspberry Pi Cameras to operate in the difficult environment of tokamaks. These cameras faced high magnetic fields, intense radiation bombardment, and substantial heat excursions. These simple and low-cost systems were able to outperform similar older systems at a dramatically reduced price with simpler implementation.  While the operation of the Raspberry Pi camera is well-documented and straight-forward, this new equipment interfaced with the computer, electrical and mechanical systems of the Alcator C-Mod tokamak.
 
 This required the following:
 
@@ -20,12 +20,12 @@ This required the following:
   <li>Placing power supplies away from high magnetic fields</li>
 </ul>
 
-The end result of this work can be seen in the spactacular conclusion of the plasmas (known as a 'disruption') shown both in the video (which I uploaded to Youtube) and the introductory image at the top of the page. These highlight the camera's robustness and exhibits the ability of such simple systems to collect such unique and interesting images.
+The end result of this work can be seen in the spectacular conclusion of the plasmas (known as a 'disruption') shown both in the video (which I uploaded to Youtube) and the introductory image at the top of the page. These highlight the camera's robustness and exhibits the ability of such simple systems to collect such unique and interesting images.
 
 <div class="video-container"><iframe id='iframe2' src="https://www.youtube.com/embed/CUfR819hIDg"></iframe>
 </div>
 
-Depending on the settings and optics, it can take high quality 5MP pictures 10 times a second all the way to 640x480 resolution at 90 frames per second. The picture and video are from these two ends of this acquisition spectrum. Limitations in the lenses in this case reduce crisp quality of the full images, but are still spactacular in their own way.  In the end, I installed four of these cameras at various locations around the tokamak, each of which yielding a unique perspective on the world of high-temperature plasma physics.
+Depending on the settings and optics, it can take high quality 5MP pictures 10 times a second all the way to 640x480 resolution at 90 frames per second. The picture and video are from these two ends of this acquisition spectrum. Limitations in the lenses in this case reduce crisp quality of the full images, but are still spectacular in their own way.  In the end, I installed four of these cameras at various locations around the tokamak, each of which yielding a unique perspective on the world of high-temperature plasma physics.
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/necessary_items.jpg" alt="Necessary Items for a single camera system"/>
@@ -45,7 +45,7 @@ Tokamaks are vacuum chambers which are limited in space due to the surrounding m
 
 <h3> Optimization of the optics for individual views </h3>
 
-The standard lens on the Raspberry Pi is ideal for distances greater than one meter with a wide field of view.  The uses of this camera on tokamaks vary from fisheye views to telescopic/focused views, requring alternate optics.  Luckily the PCB was designed to accept other optics and the choice depends on the desired view. Outside of the optics, the mounting structure can be easily 3D printed and tapped.
+The standard lens on the Raspberry Pi is ideal for distances greater than one meter with a wide field of view.  The uses of this camera on tokamaks vary from fisheye views to telescopic/focused views, requiring alternate optics.  Luckily the PCB was designed to accept other optics and the choice depends on the desired view. Outside of the optics, the mounting structure can be easily 3D printed and tapped.
 
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IMG_20150612_134352-nopm-.jpg" alt="Double camera system inserted within a reentrant tube"/>
@@ -69,7 +69,7 @@ If there is anything I've learned while doing circuit testing is that both capac
 
 In the case of the Camera on a tokamak, it is vital that the camera is told to start acquiring images a set time, given by a centralized trigger signal.  This 5V electrical signal needs to be sent to the camera, which can be easily done through the <a href="https://pinout.xyz/">Raspberry Pi GPIO</a>.  However, the ground of the triggering signal generator and the ground of the camera are separated.  The high magnetic fields about the tokamak with the large separation of the grounds leads to significant magnetic flux.  This magnetic flux could lead to EMF potentials which could harm the camera.
 
-Electrical isolation of the triggering system from the camera is possible through the use of an <a href="https://en.wikipedia.org/wiki/Opto-isolator">'opto-coupler'</a>.  The triggering circut connects to the CAMAC triggering board via a <a href="https://www.lemo.com/">2-pin LEMO</a>, which was standard at the PSFC. The Pi's side uses pins 4,6 and 8 to get 5V, a ground, and a GPIO pin all of which are close together. A simple pull down resistor and a current limiting resistor for the diode are the only other needed parts.
+Electrical isolation of the triggering system from the camera is possible through the use of an <a href="https://en.wikipedia.org/wiki/Opto-isolator">'opto-coupler'</a>.  The triggering circuit connects to the CAMAC triggering board via a <a href="https://www.lemo.com/">2-pin LEMO</a>, which was standard at the PSFC. The Pi's side uses pins 4,6 and 8 to get 5V, a ground, and a GPIO pin all of which are close together. A simple pull down resistor and a current limiting resistor for the diode are the only other needed parts.
 
 
 <h3> Placing power supples away from high magnetic fields </h3>
@@ -87,7 +87,7 @@ As a point of note, the camera head is rather impervious to the magnetic field a
 
 The camera by design is meant for a layman to used for plug-and-play projects.  The camera can be controlled using a number of programming languages with various APIs including Python, bash and C/C++. From frame rates, to exposures, to white balance, all parameters are controlled through the API to the underlying SDK for the camera interface.  Due to my familiarity and relative ease in debugging, Python was used to interface with the experimental data system, which also has a native Python API.
 
-Alcator C-Mod, and most other tokamaks in the United States (and some abroad) use <a href="http://www.mdsplus.org/index.php/Introduction">MDSplus</a> to control tokamaks and store experimental data.  It has APIs written in a number of languages, with the Python implementation being one of the more expansive and well documented. The MDSplus system is capable of sending broadcast messages over a network to prepare various equipment for a syncronous trigger. A daemon is used to wait for a preparation message which activates a script to set necessary parameters and wait for the trigger pulse. Using the previously described triggering (through the Raspberry Pi GPIO), the camera can also be triggered syncronously.
+Alcator C-Mod, and most other tokamaks in the United States (and some abroad) use <a href="http://www.mdsplus.org/index.php/Introduction">MDSplus</a> to control tokamaks and store experimental data.  It has APIs written in a number of languages, with the Python implementation being one of the more expansive and well documented. The MDSplus system is capable of sending broadcast messages over a network to prepare various equipment for a synchronous trigger. A daemon is used to wait for a preparation message which activates a script to set necessary parameters and wait for the trigger pulse. Using the previously described triggering (through the Raspberry Pi GPIO), the camera can also be triggered synchronously.
 
 Before the triggering, a prescribed set of parameters are loaded to the camera (such as the length of the video, quality and frames per second) and the program sets to wait on the GPIO trigger. After the triggering, the file is transferred to a main file server and the video is transformed into a individual black/white intensity images.  These images are stored as 8-bit byte data in the MDSplus data structure for analysis.  
 
@@ -98,6 +98,6 @@ Before the triggering, a prescribed set of parameters are loaded to the camera (
 
 Conversion from video to the intensity data is not as straightforward as would be originally imagined. The video data is originally in mp4 format, which is not intensity data.  However, there is a standard format which contains a straightforward output to intensity, it is known as the <a href="https://en.wikipedia.org/wiki/YUV">YUV format</a>.  The original purpose was to be able to encode color data while preserving the capability of black-and-white televisions.  The camera data was processed from a mp4 video to a <a href="https://en.wikipedia.org/wiki/YUV#Y.E2.80.B2UV420p_.28and_Y.E2.80.B2V12_or_YV12.29_to_RGB888_conversion">YUV420</a> (where 420 describes the ratio of bits of the various channels).  This is then converted into the byte data to be stored efficiently for analysis by the data system.
 
-In the example figure, the various channels of color and luminance are shown for another C-Mod camera image.  As human sight is more keyed on intensity (more rods than cones in the eye), coorespondingly the resolution of the color channel images are noticibly worse than the black-white image.  Ths sparkling observed are from small pieces of Calcium Floride going into the plasma.  The lack of variation in the other channels shows that the intensity data is most interesting for analysis.
+In the example figure, the various channels of color and luminance are shown for another C-Mod camera image.  As human sight is more keyed on intensity (more rods than cones in the eye), correspondingly the resolution of the color channel images are noticibly worse than the black-white image.  The sparkling observed are from small pieces of Calcium Floride going into the plasma.  The lack of variation in the other channels shows that the intensity data is most interesting for analysis.
 
 The codes are available <a href="https://github.com/icfaust/Misc/tree/master/Raspicam">on my GitHub</a>, just shoot me an email about any questions!
