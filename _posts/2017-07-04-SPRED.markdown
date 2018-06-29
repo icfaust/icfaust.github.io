@@ -124,7 +124,6 @@ The CCD sensor of the spectrometer is a 2d array which is summed in one directio
 
 <h3> Conclusions </h3>
 
-With all of this work, the spectrometer (with the two gratings and two cameras) was returned to service.  Reverse engineering often requires conservative planning often with significant engineering on its own.  With a slow and careful approach it is possible to fix most things, however it is truly a question of time and effort. With this, I definitely have an appreciation for both engineering design and the process by which firms try to reverse engineering it.
-
+With all of this work, the spectrometer (with the two gratings and two cameras) was returned to service. The understanding, fixing and calibration of a unique instrument (truly unique, as the only in the world) was a daunting task. However, with conservative planning often with significant engineering of its own it is not impossible.  With a slow and careful approach it is possible to fix most things, however it is truly a question of time and effort. 
 
   <!-- WHAT IS THE ANGLE? -->
