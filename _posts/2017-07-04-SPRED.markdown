@@ -74,12 +74,12 @@ A laser system was set onto an optical rail with the spectrometer core (as seen 
 
 After the precise calibration, it was unknown what was necessary to preserve the alignment in reinstallation.  Again, a conservative course of action was taken.  Two shrouds were 3D printed which went over the entire grating holder to prevent bumps and accidents from causing any changes. However, that is not sufficient to guarantee proper operation after reinstallation in the vacuum vessel.  A secondary system needed to be developed to set the cameras to the proper focus and wavelengths.  This is backwards from visible camera systems, where the optics themselves are often adjusted to improve image quality.
 
-As can be seen in the above figure, there was simply not enough room to put in an optical rail or any other device with enough accuracy for the focus and wavelenth adjustments. Again, two avaiable screw holes in the spectrometer were re-used. When reassembled, these two screws hold the differential pumping section to the front of the spectrometer core. This was ideal as they are located near the main conflat flange at the front of the spectrometer, opening widely to the outside world.  This mounting point was repurposed to hold a laser or LED for the initial camera wavelength and focus calibration. Using 3D printed parts and precision optical adjustment tables, the light source position could be adjusted and fixed as necessary to the front of the aperture.
+As can be seen in the above figure, there was simply not enough room to put in an optical rail or any other device with enough accuracy for the focus and wavelength adjustments. Again, two avaiable screw holes in the spectrometer were re-used. When reassembled, these two screws hold the differential pumping section to the front of the spectrometer core. This was ideal as they are located near the main conflat flange at the front of the spectrometer, opening widely to the outside world.  This mounting point was repurposed to hold a laser or LED for the initial camera wavelength and focus calibration. Using 3D printed parts and precision optical adjustment tables, the light source position could be adjusted and fixed as necessary to the front of the aperture.
   
   <!-- Fully installed picture yep -->
   <figure>
     <img src="https://raw.githubusercontent.com/icfaust/icfaust.github.io/master/_screenshots/IMG_20171023_180054.jpg" alt="Not Sure"/>
-    <figcaption> 3D printed LED mount.  It attaches to the exterior of the vacuum vessel, and is adjusted to set just in front of the entrance aperture. A similar system was set up for the inital laser calibration.</figcaption>
+    <figcaption> 3D printed LED mount.  It attaches to the exterior of the vacuum vessel, and is adjusted to set just in front of the entrance aperture. A similar system was set up for the initial laser calibration.</figcaption>
   </figure>
 
 The light from the the LED and laser, after passing through the aperture and reflecting off the grating, are sent to the image plane. On this end another fixture was built to set the focus and wavelength (essentially the position) of the camera. As with the laser/LED mount, the secondary fixture was attached to the exterior vacuum vessel. This point is how the cameras are attached to the spectrometer.  The calibration fixture also used precise optical tables to adjust a visible camera CCD.  The CCD was used to find the 0th order focus position with proper offsets such that the wavelengths of interest could properly imaged by the UV camera.
@@ -111,7 +111,7 @@ The two <a href="https://www.princetoninstruments.com/">Princeton Instruments X-
     <figcaption> The raw spectra of a Helium observes two prominent Helium lines, 30.4 nm and 58.5nm. The spectra shows that the recalibration meets the expected goal: the expected spectral range with good focus. </figcaption>
   </figure>
 
-The available light source at ASDEX-Upgrade is a Helium plasma which creates several strong and easily identifiable emission lines at specfic wavelengths.  In the UV, these were used to find the wavelength of the spectrometers, and set the proper focus (by minimizing the width of the line).  This older system uses at 10kV 10mA power supply to energize a thin helium gas using a square antenna.
+The available light source at ASDEX-Upgrade is a Helium plasma which creates several strong and easily identifiable emission lines at specific wavelengths.  In the UV, these were used to find the wavelength of the spectrometers, and set the proper focus (by minimizing the width of the line).  This older system uses at 10kV 10mA power supply to energize a thin helium gas using a square antenna.
 
   <!-- Spectra Image (full) yep -->
 
